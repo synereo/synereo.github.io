@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="The Decentralized and Distributed Social Network">  
+
+    <title>Synereo - The Decentralized and Distributed Social Network</title>
+
+    <link rel="pingback" href="http://www.synereo.com/xmlrpc.php" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="canonical" href="http://www.synereo.com/" />
+    <link rel='shortlink' href='http://www.synereo.com/' />
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+
+    <meta name="description" itemprop="description" content="Synereo is the The Decentralized and Distributed Social Network, powered by the people who use it." />
+
+    <!-- TODO: fix RSS feeds -->
+    <link rel="alternate" type="application/rss+xml" title="Synereo &raquo; Feed" href="http://www.synereo.com/?feed=rss2" />
+    <link rel="alternate" type="application/rss+xml" title="Synereo &raquo; Comments Feed" href="http://www.synereo.com/?feed=comments-rss2" />
+    <link rel="alternate" type="application/rss+xml" title="Synereo &raquo; Front Page Comments Feed" href="http://www.synereo.com/?feed=rss2&#038;page_id=35" />
+
+    <link rel='stylesheet' id='ut-responsive-grid-css' href='css/ut-shortcodes/ut-responsive-grid.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-fontawesome-css' href='css/ut-shortcodes/font-awesome.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-animate-css' href='css/ut-shortcodes/ut.animate.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-elastislide-css' href='css/ut-shortcodes/ut.elastislide.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-fancyrotator-css' href='css/ut-shortcodes/ut.fancyrotator.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='ut-shortcodes-css' href='css/brooklyn-child/ut.shortcode.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='contact-form-7-css' href='css/contact-form-7/styles.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='css/revslider/settings.css' type='text/css' media='all' />
+
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+    .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+    </style>
+
+    <link rel='stylesheet' id='main-font-face-css'  href='css/brooklyn/ut-fontface.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-flexslider-css'  href='css/brooklyn/flexslider.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-prettyphoto-css'  href='css/brooklyn/prettyPhoto.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ut-superfish-css'  href='css/brooklyn/ut-superfish.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='unitedthemes-style-css'  href='css/brooklyn-child/style.css' type='text/css' media='all' />
+
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+
+    <script type='text/javascript' src='js/revslider/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js/revslider/jquery.themepunch.revolution.min.js'></script>
+
+    <script type='text/javascript' src='js/ut-shortcodes/modernizr.min.js'></script>
+    <script type='text/javascript' src='js/ut-shortcodes/jquery.flexslider-min.js'></script>
+    <script type='text/javascript' src='js/ut-shortcodes/jquery.elastislide.js'></script>
+    <script type='text/javascript' src='js/brooklyn/jquery.lazy.load.js'></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            var ajaxRevslider = function(obj) {
+            
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+                
+                var content = "<h2>THIS IS SOME TITLE</h2><br/>";
+
+                content += "Type:"+obj.type+"</br>";
+                content += "ID:"+obj.id+"</br>";        
+                content += "Aspect Ratio:"+obj.aspectratio+"</br>";  
+                
+                data = {};
+                
+                data.action = 'revslider_ajax_call_front';
+                data.client_action = 'get_slider_html';
+                data.token = '9c576ef6bf';
+                data.type = obj.type;
+                data.id = obj.id;
+                data.aspectratio = obj.aspectratio;
+                
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type:"post",
+                    url:"http://www.synereo.com/wp-admin/admin-ajax.php",
+                    dataType: 'json',
+                    data:data,
+                    async:false,
+                    success: function(ret, textStatus, XMLHttpRequest) {
+                        if(ret.success == true)
+                            content = ret.data;                             
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+                
+                 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                 return content;                         
+            };
+            
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function(obj) {
+                return jQuery(obj.selector+" .rev_slider").revkill();
+            }
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            var extendessential = setInterval(function() {
+                if (jQuery.fn.tpessential != undefined) {
+                    clearInterval(extendessential);
+                    if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined')
+                        jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});   
+                        // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                        // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                        // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                        // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+                }
+            },30);
+        });
+    </script>
+
+    <style type="text/css">
+        ::-moz-selection{ background: #2face2; }::selection { background:#2face2; }a, .ha-transparent #navigation ul li a:hover { color: #2face2; }.ut-language-selector a:hover { color: #2face2; }.ut-custom-icon-link:hover i { color: #2face2 !important; }.ut-hide-member-details:hover, #ut-blog-navigation a:hover, .light .ut-hide-member-details, .ut-mm-button:hover:before, .ut-mm-trigger.active .ut-mm-button:before, .ut-mobile-menu a:after { color: #2face2; }.ut-header-light .ut-mm-button:before { color: #2face2; }.lead span, .entry-title span, #cancel-comment-reply-link, .member-description-style-3 .ut-member-title,.ut-twitter-rotator h2 a, .themecolor{ color: #2face2; }.icons-ul i, .comments-title span, .member-social a:hover, .ut-parallax-quote-title span, .ut-member-style-2 .member-description .ut-member-title { color:#2face2; }.about-icon, .ut-skill-overlay, .ut-dropcap-one, .ut-dropcap-two, .ut-mobile-menu a:hover, .themecolor-bg, .ut-btn.ut-pt-btn:hover, .ut-btn.dark:hover { background:#2face2; }blockquote, div.wpcf7-validation-errors, .ut-hero-style-5 .hero-description, #navigation ul.sub-menu, .ut-member-style-3 .member-social a:hover { border-color:#2face2; }.cta-section, .ut-btn.theme-btn, .ut-social-link:hover .ut-social-icon, .ut-member-style-2 .ut-so-link:hover { background:#2face2 !important; }.ut-social-title, .ut-service-column h3 span, .ut-rq-icon{ color:#2face2; }.count, .ut-icon-list i { color:#2face2; }.client-section, .ut-portfolio-pagination.style_two a.selected:hover, .ut-portfolio-pagination.style_two a.selected, .ut-portfolio-pagination.style_two a:hover, .ut-pt-featured { background:#2face2 !important; }ins, mark, .ut-alert.themecolor, .ut-portfolio-menu.style_two li a:hover, .ut-portfolio-menu.style_two li a.selected, .light .ut-portfolio-menu.style_two li a.selected:hover { background:#2face2; }.footer-content i { color:#2face2; }.copyright a:hover, .footer-content a:hover, .toTop:hover, .ut-footer-dark a.toTop:hover { color:#2face2; }blockquote span { color:#2face2; }.entry-meta a:hover, #secondary a:hover, .page-template-templatestemplate-archive-php a:hover { color:#2face2; }h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .ut-header-dark .site-logo .logo a:hover { color:#2face2; }a.more-link:hover, .fa-ul li .fa{ color:#2face2; }.ut-pt-featured-table .ut-pt-info .fa-li{ color: #2face2 !important; }.button, input[type="submit"], input[type="button"], .dark button, .dark input[type="submit"], .dark input[type="button"], .light .button, .light input[type="submit"], .light input[type="button"] { background:#2face2; }.img-hover { background:rgb(47,172,226);background:rgba(47,172,226, 0.85); }.portfolio-caption { background:rgb(47,172,226);background:rgba(47,172,226, 0.85); }.team-member-details { background:rgba(47,172,226, 0.85 ); }.ut-avatar-overlay { background:rgb(47,172,226); background:rgba(47,172,226, 0.85 ); }.mejs-controls .mejs-time-rail .mejs-time-current, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current, .format-link .entry-header a { background:#2face2 !important; }.light .ut-portfolio-menu li a:hover, .light .ut-portfolio-pagination a:hover, .light .ut-nav-tabs li a:hover, .light .ut-accordion-heading a:hover { border-color:#2face2 !important; }.light .ut-portfolio-menu li a:hover, .light .ut-portfolio-pagination a:hover, .ut-portfolio-list li strong, .light .ut-nav-tabs li a:hover, .light .ut-accordion-heading a:hover, .ut-custom-icon a:hover i:first-child { color:#2face2 !important; }.ut-portfolio-gallery-slider .flex-direction-nav a, .ut-gallery-slider .flex-direction-nav a, .ut-rotate-quote-alt .flex-direction-nav a, .ut-rotate-quote .flex-direction-nav a{ background:rgb(47,172,226); background:rgba(47,172,226, 0.85); }.light .ut-bs-wrap .entry-title a:hover, .light .ut-bs-wrap a:hover .entry-title{ color: #2face2; }.ut-rated i { color: #2face2; }.ut-footer-area ul.sidebar a:hover { color: #2face2; }.ut-footer-dark .ut-footer-area .widget_tag_cloud a:hover { color: #2face2!important; }.ut-footer-dark .ut-footer-area .widget_tag_cloud a:hover { border-color: #2face2; }.elastislide-wrapper nav span:hover { border-color: #2face2; }.elastislide-wrapper nav span:hover { color: #2face2; }.ut-footer-so li a:hover { border-color: #2face2; }.ut-footer-so li a:hover i { color: #2face2!important; }.ut-pt-wrap.ut-pt-wrap-style-2 .ut-pt-featured-table .ut-pt-header { background:#2face2; }.ut-pt-wrap-style-3 .ut-pt-info ul li, .ut-pt-wrap-style-3 .ut-pt-info ul, .ut-pt-wrap-style-3 .ut-pt-header, .ut-pt-wrap-style-3 .ut-btn.ut-pt-btn, .ut-pt-wrap-style-3 .ut-custom-row, .ut-pt-wrap-style-3 .ut-pt-featured-table .ut-btn { border-color:rgba(47,172,226, 0.1); }.ut-pt-wrap-style-3 .ut-btn { color:#2face2 !important; }.ut-pt-wrap-style-3 .ut-btn { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }.ut-pt-wrap-style-3 .ut-pt-featured-table .ut-btn { color:#2face2 !important; }.ut-pt-wrap-style-3 .ut-pt-featured-table .ut-btn { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }.ut-pt-wrap-style-3 .ut-pt-featured-table .ut-pt-title { color:#2face2 !important; }.ut-pt-wrap-style-3 .ut-pt-featured-table .ut-pt-title { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }.ut-glow {color:#2face2;text-shadow:0 0 40px #2face2, 2px 2px 3px black; }.light .ut-shortcode-video-wrap .ut-video-caption { border-color:rgba(47,172,226, 1); }.light .ut-shortcode-video-wrap .ut-video-caption i { border-color:rgba(47,172,226, 0.3); }.light .ut-shortcode-video-wrap .ut-video-caption i { color:rgba(47,172,226, 0.3); }.light .ut-shortcode-video-wrap .ut-video-caption:hover i { border-color:rgba(47,172,226, 1); }.light .ut-shortcode-video-wrap .ut-video-caption:hover i { color:#2face2 !important; }.light .ut-shortcode-video-wrap .ut-video-caption:hover i { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }.light .ut-video-loading { color:#2face2 !important; }.light .ut-video-loading { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }.light .ut-video-caption-text { border-color:rgba(47,172,226, 1); }.js #main-content section .section-content,.js #main-content section .section-header-holder {opacity:0;}#header-section.ut-header-light,.ha-header.ha-transparent:hover,.ha-header.ha-transparent:hover #navigation ul.sub-menu li > a,#header-section.ut-header-light #navigation ul.sub-menu li > a {background: rgba(18,18,18 , 0.95 ) ; }#navigation li a:hover { color:#2face2; }#navigation .selected, #navigation ul li.current_page_parent a.active, #navigation ul li.current-menu-ancestor a.active { color: #2face2; }#navigation ul li a:hover,#navigation ul.sub-menu li a:hover { color: #2face2; }#navigation ul.sub-menu li > a { color: #999999; }#navigation ul li.current-menu-item:not(.current_page_parent) a, #navigation ul li.current_page_item:not(.current_page_parent) a { color: #2face2; }#navigation ul li.current-menu-item:not(.current_page_parent) .sub-menu li a { color: #999999; }.ut-header-dark #navigation li a:hover { color:#2face2; }.ut-header-dark #navigation .selected,.ut-header-dark #navigation ul li.current_page_parent a.active, .ut-header-dark #navigation ul li.current-menu-ancestor a.active { color: #2face2; }.ut-header-dark #navigation ul li a:hover,.ut-header-dark #navigation ul.sub-menu li a:hover { color: #2face2; }.ut-header-dark #navigation ul.sub-menu li > a { color: #999999; }.ut-header-dark #navigation ul li.current-menu-item:not(.current_page_parent) a, .ut-header-dark #navigation ul li.current_page_item:not(.current_page_parent) a { color: #2face2; }.ut-header-dark #navigation ul li.current-menu-item:not(.current_page_parent) .sub-menu li a { color: #999999; }.ut-loader-overlay { background: #FFF}.hero-title span:not(.ut-word-rotator) { color:#2face2 !important; }.hero-title.ut-glow span { text-shadow: 0 0 40px #2face2, 2px 2px 3px black; }body { font-family: ralewayregular, "Helvetica Neue", Helvetica, Arial, sans-serif; }h1 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }h2 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }h3 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }h4 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }h5 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }h6 { font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }.hero-title { text-transform: uppercase; }.hero-title { font-family: ralewayextralight, "Helvetica Neue", Helvetica, Arial, sans-serif; }.hero{background-repeat: !important;background-attachment: !important;background-position:center top !important;background-size: !important;background-image:url("http://www.synereo.com/wp-content/uploads/2015/01/Synereo1.jpg");}#contact-section .parallax-title { color: #2face2}#contact-section .pt-style-2 .page-title:after, #contact-section .pt-style-2 .parallax-title:after, #contact-section .pt-style-2 .section-title:after {background-color: #2face2;}#contact-section .lead { color: #2face2 }#contact-section .parallax-title span span { color:#2face2; }#contact-section{background-repeat: !important;background-size: !important;background-image:url("http://www.synereo.com/wp-content/uploads/2015/01/contact-pic.jpg");}#contact-section .parallax-overlay { background: rgb(20,20,20,0.8); }#contact-section .parallax-overlay { background: rgba(20,20,20,0.8); }#contact-section { padding-top:80px; padding-bottom:60px; }#contact-section .ut-offset-anchor { top:-159px; }blockquote { font-family: ralewayextralight, "Helvetica Neue", Helvetica, Arial, sans-serif; }.lead, .taxonomy-description { font-family: ralewayextralight, "Helvetica Neue", Helvetica, Arial, sans-serif; }#ut-loader-logo { background-image: url(http://www.synereo.com/wp-content/uploads/2015/01/logo.png); background-position: center center; background-repeat: no-repeat; }.footer, a.toTop {background: #121212 ;}#the-network-2{ padding-top:1px; padding-bottom:1px; }#the-network-2 .ut-offset-anchor { top:-80px; }#the-network-2 .parallax-header { padding-bottom:30px; }#the-network-2 .section-header { padding-bottom:30px; }#the-network-2 .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#the-network-2 .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#the-network-2{ background-color: #111111; }#the-network-2 .section-header.pt-style-1 .section-title span{ background-color: #111111; }#get-connected{ padding-top:300px; padding-bottom:300px; }#get-connected .ut-offset-anchor { top:-379px; }#get-connected .parallax-header { padding-bottom:30px; }#get-connected .section-header { padding-bottom:30px; }#get-connected .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#get-connected .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#get-connected.parallax-section{background-repeat: !important;background-size: !important;background-image:url("http://www.synereo.com/wp-content/uploads/2013/12/network.jpg");}#get-connected{ background-color: #121212; }#get-connected .section-header.pt-style-1 .section-title span{ background-color: #121212; }#get-connected .parallax-title { color: #0f1217; }#get-connected .section-title { color: #0f1217; }#get-connected .pt-style-5 .page-title span, #get-connected .pt-style-5 .parallax-title span, #get-connected .pt-style-5 .section-title span {background:#0f1217;-webkit-box-shadow:0 0 0 3px#0f1217; -moz-box-shadow:0 0 0 3px#0f1217; box-shadow:0 0 0 3px#0f1217; }#get-connected .lead, #get-connected .lead p { color: #0f1217; }#network-child{ padding-top:30px; padding-bottom:30px; }#network-child .ut-offset-anchor { top:-109px; }#network-child .parallax-header { padding-bottom:30px; }#network-child .section-header { padding-bottom:30px; }#network-child .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#network-child .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#network-child{ background-color: #322e2f; }#network-child .section-header.pt-style-1 .section-title span{ background-color: #322e2f; }#our-coin{ padding-top:1px; padding-bottom:1px; }#our-coin .ut-offset-anchor { top:-80px; }#our-coin .parallax-header { padding-bottom:30px; }#our-coin .section-header { padding-bottom:30px; }#our-coin .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-coin .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-coin{ background-color: #111111; }#our-coin .section-header.pt-style-1 .section-title span{ background-color: #111111; }#our-service{ padding-top:300px; padding-bottom:200px; }#our-service .ut-offset-anchor { top:-379px; }#our-service .parallax-header { padding-bottom:30px; }#our-service .section-header { padding-bottom:30px; }#our-service .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-service .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-service.parallax-section{background-repeat: !important;background-size: !important;background-image:url("http://www.synereo.com/wp-content/uploads/2013/10/amp1.jpg");}#our-service{ background-color: #121212; }#our-service .section-header.pt-style-1 .section-title span{ background-color: #121212; }#our-service .section-content { color: #606060; }#our-service .section-content h1 { color: #505050 !important; }#our-service .section-content h2 { color: #505050 !important; }#our-service .section-content h3 { color: #505050 !important; }#our-service .section-content h4 { color: #505050 !important; }#our-service .section-content h5 { color: #505050 !important; }#our-service .section-content h6 { color: #505050 !important; }#our-service .lead, #our-service .lead p { color: #707070; }#our-services-child{ padding-top:40px; padding-bottom:40px; }#our-services-child .ut-offset-anchor { top:-119px; }#our-services-child .parallax-header { padding-bottom:30px; }#our-services-child .section-header { padding-bottom:30px; }#our-services-child .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-services-child .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-services-child{ background-color: #222222; }#our-services-child .section-header.pt-style-1 .section-title span{ background-color: #222222; }#our-services-child .section-content h1 { color: #2fade0 !important; }#our-services-child .section-content h2 { color: #2fade0 !important; }#our-services-child .section-content h3 { color: #2fade0 !important; }#our-services-child .section-content h4 { color: #2fade0 !important; }#our-services-child .section-content h5 { color: #2fade0 !important; }#our-services-child .section-content h6 { color: #2fade0 !important; }#our-services-child .lead, #our-services-child .lead p { color: #2fade0; }#our-team-2{ padding-top:1px; padding-bottom:1px; }#our-team-2 .ut-offset-anchor { top:-80px; }#our-team-2 .parallax-header { padding-bottom:30px; }#our-team-2 .section-header { padding-bottom:30px; }#our-team-2 .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-team-2 .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#our-team-2{ background-color: #111111; }#our-team-2 .section-header.pt-style-1 .section-title span{ background-color: #111111; }#ffff{ padding-top:80px; padding-bottom:60px; }#ffff .ut-offset-anchor { top:-159px; }#ffff .parallax-header { padding-bottom:30px; }#ffff .section-header { padding-bottom:30px; }#ffff .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#ffff .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#ffff{ background-color: #30ade3; }#ffff .section-header.pt-style-1 .section-title span{ background-color: #30ade3; }#ffff .section-content { color: #414141; }#ffff .section-content h1 { color: #414141 !important; }#ffff .section-content h2 { color: #414141 !important; }#ffff .section-content h3 { color: #414141 !important; }#ffff .section-content h4 { color: #414141 !important; }#ffff .section-content h5 { color: #414141 !important; }#ffff .section-content h6 { color: #414141 !important; }#ffff .parallax-title { color: #414141; }#ffff .section-title { color: #414141; }#ffff .lead, #ffff .lead p { color: #414141; }#team-line{ padding-top:0px; padding-bottom:0px; }#team-line .ut-offset-anchor { top:-79px; }#team-line .parallax-header { padding-bottom:30px; }#team-line .section-header { padding-bottom:30px; }#team-line .parallax-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#team-line .section-title{ font-family: ralewaysemibold, "Helvetica Neue", Helvetica, Arial, sans-serif; }#team-line{ background-color: #30ade3; }#team-line .section-header.pt-style-1 .section-title span{ background-color: #30ade3; }.parallax-overlay-pattern.style_one { background-image: url(" http://www.synereo.com/wp-content/themes/brooklyn/images/overlay-pattern.png") !important; }.parallax-overlay-pattern.style_two { background-image: url(" http://www.synereo.com/wp-content/themes/brooklyn/images/overlay-pattern2.png") !important; }.ut-member-title {color:#414141!important;}#to-about-section {margin-top:430px;border: 3px solid #30ade3;color:#30ade3;}.member-description-style-3 p {font-size:13px;}.fa.fa-twitter.fa-lg,.fa.fa-github.fa-lg,.fa.fa-envelope.fa-lg,.fa.fa-facebook.fa-lg,.fa.fa-linkedin.fa-lg {color:#fff;font-size: 19px;-webkit-transition: font-size 0.4s; -moz-transition:font-size 0.4s; -o-transition:font-size 0.4s;transition:font-size 0.4s;}.fa.fa-twitter.fa-lg:hover,.fa.fa-github.fa-lg:hover,.fa.fa-envelope.fa-lg:hover,.fa.fa-facebook.fa-lg:hover,.fa.fa-linkedin.fa-lg:hover {font-size: 30px!important;color:#fff;}</style>    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+    </style>
+</head>
+
+<body id="ut-sitebody" class="home page page-id-35 page-template-default" data-scrolleffect="easeInOutExpo" data-scrollspeed="650">
+    <a class="ut-offset-anchor" id="top" style="top:0px !important;"></a>
+    <header id="header-section" class="ha-header centered ut-header-light ha-header-hide">    
+        <div class="grid-container">    
+            <div class="ha-header-perspective">
+                <div class="ha-header-front">
+                    <div class="grid-20 tablet-grid-50 mobile-grid-50 ">                 
+                        <div class="site-logo">
+                            <a href="http://www.synereo.com/" title="Synereo" rel="home"><img data-altlogo="http://www.synereo.com/wp-content/uploads/2015/01/logo.png" src="http://www.synereo.com/wp-content/uploads/2015/01/logo.png" alt="Synereo"></a>
+                        </div>
+                    </div>          
+                    <nav id="navigation" class="grid-80 hide-on-tablet hide-on-mobile ">
+                        <ul id="menu-main" class="menu">
+                            <li class="ut-home-link"><a href="#top">Home</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/#section-the-network-2">Your Network</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-our-coin">Your Coin</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-our-team-2">Your Team</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-team-line">Contact US</a></li>
+                        </ul>
+                    </nav>
+                    <div class="ut-mm-trigger tablet-grid-50 mobile-grid-50 hide-on-desktop">
+                        <button class="ut-mm-button"></button>
+                    </div>
+                    <nav id="ut-mobile-nav" class="ut-mobile-menu mobile-grid-100 tablet-grid-100 hide-on-desktop">
+                        <div class="ut-scroll-pane">
+                            <ul id="ut-mobile-menu" class="ut-mobile-menu">
+                                <li class="ut-home-link"><a href="#top">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-the-network-2">Your Network</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-our-coin">Your Coin</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-our-team-2">Your Team</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="/#section-team-line">Contact US</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="clear"></div>
+
+    <section id="ut-hero" class="hero ha-waypoint parallax-section parallax-background" data-animate-up="ha-header-hide" data-animate-down="ha-header-hide">
+        <div class="grid-container">
+            <div class="hero-holder grid-100 mobile-grid-100 tablet-grid-100 ut-hero-style-1">
+                <div class="hero-inner" style="text-align:center;">                    
+                    <span class="hero-btn-holder">
+                        <a id="to-about-section" target="_self" href="#section-team-line" class="hero-btn default">SIGN UP FOR UPDATES</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div data-section="top" class="ut-scroll-up-waypoint"></div>
+    </section>
+
+    <div class="clear"></div>      
+
+    <div id="main-content" class="wrap ha-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
+        <a class="ut-offset-anchor" id="to-main-content"></a>
+        <div class="main-content-background">
+            <section id="the-network-2" data-effect="fadeIn" data-width="centered" class="page-id-3598 entry-content normal-background dark">
+                <a class="ut-offset-anchor" id="section-the-network-2"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div style="text-align:center;">
+                            <img alt="" class="ut-animate-image animated" data-effecttype="image" data-effect="fadeIn" src="http://www.synereo.com/wp-content/uploads/2015/01/YourNetwork_title.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-the-network-2"></div>
+            </section>
+
+            <div class="clear"></div> 
+            
+            <section id="get-connected" data-effect="fadeIn" data-width="fullwidth" class="page-id-3260 entry-content parallax-background parallax-banner parallax-section dark">
+                <a class="ut-offset-anchor" data-parent="section-the-network-2" id="section-get-connected"></a>
+                <div class="section-content">                  
+                    <div style="text-align:center; ">
+                        <img alt="" class="ut-animate-image animated" data-effecttype="image" data-effect="fadeIn" src="http://www.synereo.com/wp-content/uploads/2013/12/Internet_OnPicTitle.png" />
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-get-connected" data-parent="section-the-network-2"></div>
+            </section>
+
+            <div class="clear"></div>
+
+            <section id="network-child" data-effect="fadeIn" data-width="centered" class="page-id-3592 entry-content normal-background dark">
+                <a class="ut-offset-anchor" data-parent="section-the-network-2" id="section-network-child"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <p>
+                            <div class="clear"></div>
+                            <br />
+                            <style type="text/css" scoped> #utbx_54d1ef6d4088b { background:#f28739; } #utbx_54d1ef6d4088b:hover { background: #f28739; } #utbx_54d1ef6d4088b:after { box-shadow: 0 0 0 4px #f28739; } </style>
+                            <div class="ut-service-icon-box ut-one-fourth ">
+                                <div class="ut-highlight-icon-wrap ut-highlight-icon-effect">
+                                    <a id="utbx_54d1ef6d4088b" data-id="utbx_54d1ef6d4088b" data-hovercolor="#f28739" class="ut-highlight-icon fa fa-weixin " href="#" target="_self"></a>
+                                </div>
+                                <div class="ut-service-icon-box-content">
+                                    <p>
+                                        <span style="font-weight:bold;font-size:17px;">The next-gen social network</span>
+                                        <br/>Your attention is scarce, precious and powerful. It’s time for it to work for you.
+                                    </p>
+                                </div>
+                            </div>
+                            <style type="text/css" scoped> #utbx_54d1ef6d409af { background:#2face2; } #utbx_54d1ef6d409af:hover { background: #2face2; } #utbx_54d1ef6d409af:after { box-shadow: 0 0 0 4px #2face2; } </style>
+                            <div class="ut-service-icon-box ut-one-fourth ">
+                                <div class="ut-highlight-icon-wrap ut-highlight-icon-effect">
+                                    <a id="utbx_54d1ef6d409af" data-id="utbx_54d1ef6d409af" data-hovercolor="#2face2" class="ut-highlight-icon fa fa-cubes " href="#" target="_self"></a>
+                                </div>
+                                <div class="ut-service-icon-box-content">
+                                    <p>
+                                        <span style="font-weight:bold;font-size:17px;">Fully decentralized</span>
+                                        <br/>There’s no single point of failure. The network cannot be taken down or hijacked.
+                                    </p>
+                                </div>
+                            </div>
+                            <style type="text/css" scoped> #utbx_54d1ef6d40abc { background:#606163; } #utbx_54d1ef6d40abc:hover { background: #606163; } #utbx_54d1ef6d40abc:after { box-shadow: 0 0 0 4px #606163; } </style>
+                            <div class="ut-service-icon-box ut-one-fourth ">
+                                <div class="ut-highlight-icon-wrap ut-highlight-icon-effect">
+                                    <a id="utbx_54d1ef6d40abc" data-id="utbx_54d1ef6d40abc" data-hovercolor="#606163"   class="ut-highlight-icon fa fa-child " href="#" target="_self"></a>
+                                </div>
+                                <div class="ut-service-icon-box-content">
+                                    <p>
+                                        <span style="font-weight:bold;font-size:17px;">Be who you want </span> <br/>Your self-expression varies across networks.Construct and present your identity as you see fit.
+                                    </p>
+                                </div>
+                            </div>
+                            <style type="text/css" scoped> #utbx_54d1ef6d40bc6 { background:#a6ce49; } #utbx_54d1ef6d40bc6:hover { background: #a6ce49; } #utbx_54d1ef6d40bc6:after { box-shadow: 0 0 0 4px #a6ce49; } </style>
+                            <div class="ut-service-icon-box ut-one-fourth ut-column-last">
+                                <div class="ut-highlight-icon-wrap ut-highlight-icon-effect">
+                                    <a id="utbx_54d1ef6d40bc6" data-id="utbx_54d1ef6d40bc6" data-hovercolor="#a6ce49" class="ut-highlight-icon fa fa-floppy-o " href="#" target="_self">
+                                    </a>
+                                </div>
+                                <div class="ut-service-icon-box-content">
+                                    <p>
+                                        <span style="font-weight:bold;font-size:17px;">Your data is yours </span> <br/>Completely spy-proof. Only you decide who can view your profile andcontent
+                                    </p>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="ut-scroll-up-waypoint" data-section="section-network-child" data-parent="section-the-network-2"></div>      
+                
+            </section>
+                    
+            <div class="clear"></div> 
+     
+            <section id="our-coin" data-effect="fadeIn" data-width="centered" class="page-id-3606 entry-content normal-background dark">
+                <a class="ut-offset-anchor" id="section-our-coin"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div style="text-align:center; ">
+                            <img alt="" class="ut-animate-image animated" data-effecttype="image" data-effect="fadeIn" src="http://www.synereo.com/wp-content/uploads/2015/01/YourCoin_title.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-our-coin"></div>      
+            </section>
+
+            <div class="clear"></div> 
+            
+            <section id="our-service" data-effect="fadeIn" data-width="centered" class="page-id-1936 entry-content parallax-background parallax-banner parallax-section light">
+                <a class="ut-offset-anchor" data-parent="section-our-coin" id="section-our-service"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div style="text-align:left; ">
+                            <img alt="" class="ut-animate-image animated "  data-effecttype="image" data-effect="fadeIn" src="http://www.synereo.com/wp-content/uploads/2013/10/Amp_OnPicTitle.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-our-service" data-parent="section-our-coin"></div>     
+            </section>
+
+            <div class="clear"></div>
+
+            <section id="our-services-child" data-effect="fadeIn" data-width="centered" class="page-id-3589 entry-content normal-background dark">
+                <a class="ut-offset-anchor" data-parent="section-our-coin" id="section-our-services-child"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div class="ut-one-half">
+                            <div style="text-align:left; ">
+                                <img alt="" class="ut-animate-image animated" data-effecttype="image" data-effect="fade" src="http://www.synereo.com/wp-content/uploads/2015/01/Info-circle-1.jpg" />
+                            </div>
+                        </div>
+                        <div class="ut-one-half ut-column-last">
+                            <div data-effect="fadeInUp" class="clearfix democolor  ut-animate-element animated" >
+                                <figure class="ut-service-icon fa-stack fa-lg " style="line-height:60px;">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #4b4b4d"></i>
+                                    <i style="color: #ffffff" class="fa fa-stack-1x fa-desktop"></i>
+                                </figure>
+                                <div class="ut-service-column" >
+                                    <h3>Advertisers set up campaigns</h3>
+                                    <p>Synereo provides them with the tools necessary to reach their natural audiences. </p>
+                                </div>
+                            </div>
+                            <div data-effect="fadeInUp" class="clearfix   ut-animate-element animated" >
+                                <figure class="ut-service-icon fa-stack fa-lg " style="line-height:60px;">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #4b4b4d"></i>
+                                    <i style="color: #ffffff" class="fa fa-stack-1x fa-book"></i>
+                                </figure>
+                                <div class="ut-service-column" >
+                                    <h3>Content reaches engaged audiences</h3>
+                                    <p> The campaign reaches audiences most likely to react positively and interact with them. Users can always opt out of all marketing activity. </p>
+                                </div>
+                            </div>
+                            <div data-effect="fadeInUp" class="clearfix democolor  ut-animate-element animated" >
+                                <figure class="ut-service-icon fa-stack fa-lg " style="line-height:60px;">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #4b4b4d"></i>
+                                    <i style="color: #ffffff" class="fa fa-stack-1x fa-code-fork"></i>
+                                </figure>
+                                <div class="ut-service-column" >
+                                    <h3>User attention is rewarded</h3>
+                                    <p>Users receive AMPs in exchange for their attention.</p>
+                                </div>
+                            </div>
+                            <div data-effect="fadeInUp" class="clearfix  ut-column-last ut-animate-element animated" >
+                                <figure class="ut-service-icon fa-stack fa-lg " style="line-height:60px;">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #4b4b4d"></i>
+                                    <i style="color: #ffffff" class="fa fa-stack-1x fa-user"></i>
+                                </figure>
+                                <div class="ut-service-column" >
+                                    <h3>The power of AMPing </h3>
+                                    <p> Users use their AMPs to charge content they care about and boost its proliferation across the network. They can also exchange AMPs internally or through 3rd party currency platforms. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-our-services-child" data-parent="section-our-coin"></div>
+            </section>
+
+            <div class="clear"></div>
+
+            <section id="our-team-2" data-effect="fadeIn" data-width="centered" class="page-id-3633 entry-content normal-background dark">
+                <a class="ut-offset-anchor" id="section-our-team-2"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div style="text-align:center; ">
+                            <img alt="" class="ut-animate-image animated "  data-effecttype="image" data-effect="fadeIn" src="http://www.synereo.com/wp-content/uploads/2015/01/YourTeam_title.jpg" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ut-scroll-up-waypoint" data-section="section-our-team-2" ></div>      
+                
+            </section>
+                    
+            <div class="clear"></div>
+
+            <section id="ffff" data-effect="fadeIn" data-width="centered" class="page-id-3572 entry-content normal-background  dark">
+                <a class="ut-offset-anchor" data-parent="section-our-team-2" id="section-ffff"></a>
+                <div class="grid-container section-content">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                        <div class="member-wrap">
+                            <div class="member-box ut-member-style-3  grid-25 tablet-grid-50 mobile-grid-100"> 
+                                <div class="mp-holder">
+                                    <figure class="member-photo-style-3">
+                                        <img class="utlazy" src="http://www.synereo.com/wp-content/themes/brooklyn/images/placeholder/team-member.png" alt="Dor Konforty" data-original="http://www.synereo.com/wp-content/uploads/2015/01/Dor_S-w560h420.jpg">
+                                    </figure>
+                             
+                                    <div class="member-description-style-3">
+                                        <h3 class="ut-member-name">Dor Konforty</h3>
+                                        <span class="ut-member-title">CEO, Architect</span>
+                                        <p>Dor is an expert on collaboration on the net and the wisdom of crowds. Has a master’s degree in neurobiology from an interdisciplinary brain research program in Tel-Aviv University. A graduate of the Israeli Air Force computer unit. Has been living and breathing crypto since early 2011. A child of the Internet.</p>
+                                        <div class="member-social">
+                                            <a href="mailto:Dor@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                            <a href="https://www.facebook.com/Elokane"><i class="fa fa-facebook fa-lg"></i></a>
+                                            <a class="ut-so-link" href="https://www.linkedin.com/profile/view?id=43616802"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        </div>
+                                    </div>        
+                                </div>
+                            </div>
+                            
+                            <div class="member-box ut-member-style-3  grid-25 tablet-grid-50 mobile-grid-100">            
+                                <div class="mp-holder">
+                                    <figure class="member-photo-style-3">
+                                        <img class="utlazy" src="http://www.synereo.com/wp-content/themes/brooklyn/images/placeholder/team-member.png" alt="Anderson McCutcheon" data-original="http://www.synereo.com/wp-content/uploads/2015/01/Andy_S-w560h420.jpg">
+                                    </figure>
+                             
+                                    <div class="member-description-style-3">
+                                        <h3 class="ut-member-name">Anderson McCutcheon</h3>
+                                        <span class="ut-member-title">President, B2B</span>
+                                        <p>Andy comes from a diverse programming background, having served in IDF&#8217;s 8200 unit and developed real-time climate control &#038; management systems. Having built several successful communities, he has spent the last few years managing marketing for the world’s biggest real money gaming brands. Loves lamp.</p>
+                                        <div class="member-social">
+                                            <a href="mailto:Andy@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                            <a href="http://www.twitter.com/terranozergus"><i class="fa fa-twitter fa-lg"></i></a>
+                                            <a class="ut-so-link" href="http://www.linkedin.com/in/ender"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="member-box ut-member-style-3  grid-25 tablet-grid-50 mobile-grid-100">
+                                <div class="mp-holder">
+                                    <figure class="member-photo-style-3">
+                                        <img class="utlazy" src="http://www.synereo.com/wp-content/themes/brooklyn/images/placeholder/team-member.png" alt="Yuval Adam" data-original="http://www.synereo.com/wp-content/uploads/2015/01/Yuval-S-w560h420.jpg">
+                                    </figure>
+
+                                    <div class="member-description-style-3">
+                                        <h3 class="ut-member-name">Yuval Adam</h3>
+                                        <span class="ut-member-title">CTO</span>
+                                        <p>Yuval is a full-stack technologist, experienced in building distributed web services, through deploying wireless mesh networks, to embedded systems development. Holds a B.Sc in Computer Sciences from Ben-Gurion University. Founded the Tel-Aviv chapter of CryptoParty, advocating for privacy and digital liberties.</p>
+                                    
+                                        <div class="member-social">
+                                            <a href="mailto:Yuval@Synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                            <a href="http://twitter.com/yuvadm"><i class="fa fa-twitter fa-lg"></i></a>
+                                            <a href="https://github.com/yuvadm"><i class="fa fa-github fa-lg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="member-box ut-member-style-3  grid-25 tablet-grid-50 mobile-grid-100">            
+                                <div class="mp-holder">
+                                    <figure class="member-photo-style-3">
+                                        <img class="utlazy" src="http://www.synereo.com/wp-content/themes/brooklyn/images/placeholder/team-member.png" alt="Lucius Gregory Meredith" data-original="http://www.synereo.com/wp-content/uploads/2015/01/greg_S-w560h420.jpg">
+                                    </figure>
+                             
+                                    <div class="member-description-style-3">
+                                        <h3 class="ut-member-name">Lucius Gregory Meredith</h3>
+                                        <span class="ut-member-title">Mathemagician</span>
+                                        <p>Greg was the principal architect of Microsoft&#8217;s BizTalk&#8217;s Process Orchestration, sparking several industry standards including WSDL (of which Greg is a co-author). Greg holds many patents and has published many papers, including seminal papers on reflective higher-order calculi. Supports his math habit by working in computing.</p>
+
+                                        <div class="member-social">
+                                            <a href="mailto:Greg@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                            <a href="https://twitter.com/leithaus"><i class="fa fa-twitter fa-lg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>           
+                        </div>
+
+                        <div id="member_" class="ut-modal-box ut-modal-box-effect " data-id="ffff">
+                            <div class="member-detail-box grid-parent grid-100 mobile-grid-100 tablet-grid-100 section-content">
+                            <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100 add-bottom">
+                                <a class="ut-hide-member-details" href="#"><i class="fa fa-times-circle  fa-large"></i></a>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="ut-mfh grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                <figure class="member-photo-large ut-square">
+                                    <img class="ut-square" alt="Dor Konforty" src="http://www.synereo.com/wp-content/uploads/2015/01/Dor_S.jpg">
+                                </figure>
+                    
+                                <div class="member-social">
+                                    <a href="mailto:Dor@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                    <a href="https://www.facebook.com/Elokane"><i class="fa fa-facebook fa-lg"></i></a>
+                                    <a class="ut-so-link" href="https://www.linkedin.com/profile/view?id=43616802"><i class="fa fa-linkedin fa-lg"></i></a>
+                                </div> 
+                            </div>
+
+                            <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                <div class="member-box">
+                                    <h3 class="ut-member-name">Dor Konforty</h3>
+                                    <span class="ut-member-title">CEO, Architect</span>
+                                    <p>Dor is an expert on collaboration on the net and the wisdom of crowds. Has a master’s degree in neurobiology from an interdisciplinary brain research program in Tel-Aviv University. A graduate of the Israeli Air Force computer unit. Has been living and breathing crypto since early 2011. A child of the Internet.</p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            </div>
+                        </div>
+         
+                        <div id="member_1" class="ut-modal-box ut-modal-box-effect " data-id="ffff">
+                            <div class="member-detail-box grid-parent grid-100 mobile-grid-100 tablet-grid-100 section-content">
+                                <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100 add-bottom">
+                                    <a class="ut-hide-member-details" href="#"><i class="fa fa-times-circle  fa-large"></i></a>
+                                </div>
+
+                                <div class="clear"></div>
+            
+                                <div class="ut-mfh grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                    <figure class="member-photo-large ut-square">
+                                        <img class="ut-square" alt="Anderson McCutcheon" src="http://www.synereo.com/wp-content/uploads/2015/01/Andy_S.jpg">
+                                    </figure>
+                                    <div class="member-social">
+                                        <a href="mailto:Andy@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                        <a href="http://www.twitter.com/terranozergus"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a class="ut-so-link" href="http://www.linkedin.com/in/ender"><i class="fa fa-linkedin fa-lg"></i></a>
+                                    </div>
+                                </div>
+                
+                                <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                    <div class="member-box">
+                                        <h3 class="ut-member-name">Anderson McCutcheon</h3>
+                                        <span class="ut-member-title">President, B2B</span>
+                                        <p>Andy comes from a diverse programming background, having served in IDF&#8217;s 8200 unit and developed real-time climate control &#038; management systems. Having built several successful communities, he has spent the last few years managing marketing for the world’s biggest real money gaming brands. Loves lamp.</p>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+         
+                        <div id="member_2" class="ut-modal-box ut-modal-box-effect " data-id="ffff">
+                            <div class="member-detail-box grid-parent grid-100 mobile-grid-100 tablet-grid-100 section-content">
+                
+                            <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100 add-bottom">
+                                <a class="ut-hide-member-details" href="#"><i class="fa fa-times-circle  fa-large"></i></a>
+                            </div>
+                            
+                            <div class="clear"></div>
+                            <div class="ut-mfh grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                <figure class="member-photo-large ut-square">
+                                    <img class="ut-square" alt="Yuval Adam" src="http://www.synereo.com/wp-content/uploads/2015/01/Yuval-S.jpg">
+                                </figure>
+                                <div class="member-social">
+                                    <a href="mailto:Yuval@Synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                    <a href="http://twitter.com/yuvadm"><i class="fa fa-twitter fa-lg"></i></a>
+                                    <a href="https://github.com/yuvadm"><i class="fa fa-github fa-lg"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                <div class="member-box">
+                                    <h3 class="ut-member-name">Yuval Adam</h3>
+                                    <span class="ut-member-title">CTO</span>
+                                    <p>Yuval is a full-stack technologist, experienced in building distributed web services, through deploying wireless mesh networks, to embedded systems development. Holds a B.Sc in Computer Sciences from Ben-Gurion University. Founded the Tel-Aviv chapter of CryptoParty, advocating for privacy and digital liberties. </p>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            </div>
+                        </div>
+         
+                        <div id="member_3" class="ut-modal-box ut-modal-box-effect " data-id="ffff">
+                            <div class="member-detail-box grid-parent grid-100 mobile-grid-100 tablet-grid-100 section-content">
+                                <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100 add-bottom">
+                                    <a class="ut-hide-member-details" href="#"><i class="fa fa-times-circle  fa-large"></i></a>
+                                </div>
+                                
+                                <div class="clear"></div>
+
+                                <div class="ut-mfh grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                    <figure class="member-photo-large ut-square">
+                                        <img class="ut-square" alt="Lucius Gregory Meredith" src="http://www.synereo.com/wp-content/uploads/2015/01/greg_S.jpg">
+                                    </figure>
+                                
+                                    <div class="member-social">
+                                        <a href="mailto:Greg@synereo.com"><i class="fa fa-envelope fa-lg"></i></a>
+                                        <a href="https://twitter.com/leithaus"><i class="fa fa-twitter fa-lg"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="grid-70 prefix-15 tablet-grid-100 mobile-grid-100">
+                                    <div class="member-box">
+                                        <h3 class="ut-member-name">Lucius Gregory Meredith</h3>
+                                        <span class="ut-member-title">Mathemagician</span>
+                                        <p>Greg was the principal architect of Microsoft&#8217;s BizTalk&#8217;s Process Orchestration, sparking several industry standards including WSDL (of which Greg is a co-author). Greg holds many patents and has published many papers, including seminal papers on reflective higher-order calculi. Supports his math habit by working in computing.</p>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+            
+                        <div class="ut-overlay"></div>
+                    </div>
+                </div>
+                <div class="ut-scroll-up-waypoint" data-section="section-ffff" data-parent="section-our-team-2"></div>      
+            </section>
+                    
+            <div class="clear"></div>
+
+            <section id="team-line" data-effect="fadeIn" data-width="centered" class="page-id-3685 entry-content normal-background dark">
+                <a class="ut-offset-anchor" id="section-team-line"></a>
+                <div class="ut-scroll-up-waypoint" data-section="section-team-line"></div>
+            </section>
+                    
+            <div class="clear"></div> 
+        </div>
+        
+        <div class="clear"></div>
+
+        <section id="contact-section" data-effect="fadeIn" class="animated contact-section parallax-background parallax-section light">           
+            <a class="ut-offset-anchor" id="section-contact"></a>
+            <div class="grid-container parallax-content">
+                <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="parallax-header pt-style-2">
+                        <h2 class="parallax-title"><span>BE PART OF THE SOLUTION</span></h2>
+                        <p class="lead">Drop us a line!</p>
+                    </header>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="grid-container section-content">
+                <div class="grid-100 mobile-grid-100 tablet-grid-100">
+                    <div class="contact-wrap">
+                        <div class="grid-45 suffix-5 mobile-grid-100 tablet-grid-50">
+                            <div class="ut-left-footer-area clearfix">
+                                <h3>CONTACT US</h3>
+                                <p>
+                                    <span class="alignleft ut-custom-icon"><i class="fa fa fa-envelope-o fa-lg" style="color:#FDA527"></i></span>
+                                    Email: <a href="mailto:founders@synereo.com">Founders@synereo.com</a>
+                                </p>
+                                <p>GET IN TOUCH</p>
+                                <p><span class="fa-stack ut-custom-icon fa-lg alignleft"><a target="_self" href="http://facebook.com/Synereo"><i class="fa fa-circle fa-stack-2x" style="color:#a6ce49"></i><i class="fa fa-facebook fa-stack-1x" style="color:#ffffff"></i></a></span></p>
+                                <p><span class="fa-stack ut-custom-icon fa-lg alignleft"><a target="_self" href="https://github.com/synereo/"><i class="fa fa-circle fa-stack-2x" style="color:#8b8b8b"></i><i class="fa fa-github-square fa-stack-1x" style="color:#ffffff"></i></a></span></p>
+                                <p><span class="fa-stack ut-custom-icon fa-lg alignleft"><a target="_self" href="http://www.reddit.com/r/synereo"><i class="fa fa-circle fa-stack-2x" style="color:#004aa2"></i><i class="fa fa-reddit fa-stack-1x" style="color:#ffffff"></i></a></span></p>
+                                <p><span class="fa-stack ut-custom-icon fa-lg alignleft"><a target="_self" href="http://twitter.com/Synereo"><i class="fa fa-circle fa-stack-2x" style="color:#ff9000"></i><i class="fa fa-twitter fa-stack-1x" style="color:#ffffff"></i></a></span></p>
+                            </div>
+                        </div>
+
+                        <div class="grid-50 mobile-grid-100 tablet-grid-50">
+                            <div class="ut-right-footer-area clearfix">
+                                <h3>SIGN UP FOR UPDATES</h3>
+                                <p>
+                                    <div class="wpcf7" id="wpcf7-f32-o1" lang="en-US" dir="ltr">
+                                        <div class="screen-reader-response"></div>
+                                        <form name="" action="/#wpcf7-f32-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                                            <div style="display: none;">
+                                                <input type="hidden" name="_wpcf7" value="32" />
+                                                <input type="hidden" name="_wpcf7_version" value="4.0.3" />
+                                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f32-o1" />
+                                                <input type="hidden" name="_wpnonce" value="b9a74e0b34" />
+                                            </div>
+                                            <p>Your Name (required)<br />
+                                            <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></p>
+                                            <p>Your Email (required)<br />
+                                            <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></p>
+                                            <p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                        </form>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+    
+        <div class="clear"></div>
+
+        <footer class="footer ut-footer-light">        
+            <a href="#top" class="toTop"><i class="fa fa-angle-double-up"></i></a>
+            <div class="footer-content">        
+                <div class="grid-container">
+                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                        <ul class="ut-footer-so">
+                            <li><a  href="https://github.com/synereo/"><i class="fa fa-github fa-lg"></i></a></li>
+                            <li><a  href="http://www.reddit.com/r/synereo"><i class="fa fa-reddit fa-lg"></i></a></li>
+                            <li><a  href="http://twitter.com/Synereo"><i class="fa fa-twitter fa-lg"></i></a></li>
+                            <li><a  href="http://facebook.com/Synereo"><i class="fa fa-facebook fa-lg"></i></a></li>
+                        </ul>                        
+                        <span class="copyright">
+                            Powered by <a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" data-rel="generator"> WordPress</a>
+                            Theme: Brooklyn by <a href="http://themeforest.net/item/brooklyn-creative-one-page-multipurpose-theme/6221179?ref=UnitedThemes" data-rel="designer">United Themes</a>
+                        </span>
+                    </div>
+                </div>
+             </div>
+        </footer>
+        
+        <script type='text/javascript' src='js/contact-form-7/jquery.form.min.js'></script>
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var _wpcf7 = {"loaderUrl":"img\/contact-form-7\/ajax-loader.gif","sending":"Sending ..."};
+            /* ]]> */
+        </script>
+
+        <script type='text/javascript' src='js/contact-form-7/scripts.js'></script>
+        <script type='text/javascript' src='js/ut-shortcodes/tabs.collapse.min.js'></script>
+        <script type='text/javascript' src='js/ut-shortcodes/jquery.visible.min.js'></script>
+        <script type='text/javascript' src='js/ut-shortcodes/jquery.appear.js'></script>
+        <script type='text/javascript' src='js/ut-shortcodes/jquery.fitvids.js'></script>
+        <script type='text/javascript' src='js/ut-shortcodes/ut.scplugin.js'></script>
+
+        <script type='text/javascript' src='js/brooklyn/toucheffects.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/jquery.easing.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/superfish.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/retina.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/jquery.parallax.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/jquery.scrollTo.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/jquery.waypoints.min.js'></script>
+        <script type='text/javascript' src='js/brooklyn/jquery.prettyPhoto.min.js'></script>
+
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var retina_logos = {"sitelogo_retina":"","alternate_logo_retina":""};
+            /* ]]> */
+        </script>
+        
+        <script type='text/javascript' src='js/brooklyn-child/ut-init.js'></script>
+        
+        <script type="text/javascript">
+            /* <![CDATA[ */        
+            (function($){"use strict";$(document).ready(function(){ window.matchMedia||(window.matchMedia=function(){var c=window.styleMedia||window.media;if(!c){var a=document.createElement("style"),d=document.getElementsByTagName("script")[0],e=null;a.type="text/css";a.id="matchmediajs-test";d.parentNode.insertBefore(a,d);e="getComputedStyle"in window&&window.getComputedStyle(a,null)||a.currentStyle;c={matchMedium:function(b){b="@media "+b+"{ #matchmediajs-test { width: 1px; } }";a.styleSheet?a.styleSheet.cssText=b:a.textContent=b;return"1px"===e.width}}}return function(a){return{matches:c.matchMedium(a|| "all"),media:a||"all"}}}());var ut_modern_media_query = window.matchMedia( "screen and (-webkit-min-device-pixel-ratio:2)");$(window).load(function(){function show_slogan(){$(".hero-holder").animate({ opacity : 1 });}var execute_slogan = setTimeout ( show_slogan , 800);});$(".cta-btn a").click( function(event){ if(this.hash){$.scrollTo( this.hash , 650, { easing: "easeInOutExpo" , offset: -79 , "axis":"y" });event.preventDefault();}});var $header = $("#header-section"),$logo= $(".site-logo img"),logo= $logo.attr("src"),logoalt = $logo.data("altlogo"),is_open = false,has_passed= false;var ut_nav_skin_changer = function( direction , animClassDown , animClassUp){if( direction === "down" && animClassDown){$header.attr("class", "ha-header ut-header-light centered " + animClassDown);$logo.attr("src" , logoalt);} else if( direction === "up" && animClassUp){$header.attr("class", "ha-header ut-header-light centered " + animClassUp);$logo.attr("src" , logo);}};$( ".ha-waypoint").each( function(i){var $this = $( this),animClassDown = $this.data( "animateDown"),animClassUp = $this.data( "animateUp");$this.waypoint(function(direction){ut_nav_skin_changer( direction , animClassDown , animClassUp);}, { offset: 80 });});$(".parallax-banner").addClass("fixed").each(function(){$(this).parallax( "50%", 0.6); });$(".contact-section.parallax-section").addClass("fixed").parallax("50%", 0.6,true);$("section").each(function(){var outerHeight = $(this).outerHeight(),offset= "90%",effect= $(this).data("effect");if( outerHeight > $(window).height()/ 2){offset = "70%";}$(this).waypoint( function( direction){var $this = $(this);if( direction === "down" && !$(this).hasClass( effect)){$this.find(".section-content").animate( { opacity: 1 } , 1600);$this.find(".section-header-holder").animate( { opacity: 1 } , 1600);}} , { offset: offset });});});})(jQuery); 
+             /* ]]> */
+        </script>    
+    </div>
+</body>
+</html>
