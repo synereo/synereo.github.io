@@ -9,3 +9,11 @@ Synereo website and blog content and templates. Based on [Jekyll](http://jekyllr
 ```bash
 $ gem install jekyll
 ```
+
+## Dev
+
+To get a local environment running on [http://localhost:4000](http://localhost:4000), run:
+
+```bash
+$ jekyll serve
+```
