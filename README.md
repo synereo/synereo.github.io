@@ -17,3 +17,7 @@ To get a local environment running on [http://localhost:4000](http://localhost:4
 ```bash
 $ jekyll serve
 ```
+
+## Deploy
+
+Rebase branch `gh-pages` onto your work (usually `master`) and push to Github.
