@@ -20,4 +20,5 @@ $ jekyll serve
 
 ## Deploy
 
-Rebase branch `gh-pages` onto your work (usually `master`) and push to Github.
+Deploying is as simple as pushing the default `gh-pages` branch to Github.
+
