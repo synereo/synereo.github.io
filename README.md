@@ -20,5 +20,5 @@ $ jekyll serve
 
 ## Deploy
 
-Deploying is as simple as pushing the default `gh-pages` branch to Github.
+Deploying is as simple as pushing the default `master` branch to Github.
 
