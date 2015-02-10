@@ -1720,10 +1720,11 @@ ul.ut-tablet li.show {
 	margin-bottom:0;
 	color:#222222;
 	font-size:17px;
+	font-weight:bold;
 }
 .ut-member-title {
 	display:block;
-	font-size:11px;
+	font-size:12px;
 	letter-spacing:0.5px;
 	line-height:150%;
 	text-transform:uppercase;
@@ -1822,7 +1823,7 @@ ul.ut-tablet li.show {
 	border-bottom:1px solid #FFFFFF;
 }
 .member-description-style-3 {
-	padding:20px;
+	padding:20px 3px 20px 3px;
 	text-align:center;
 }
 .ut-member-style-3 .member-social {
