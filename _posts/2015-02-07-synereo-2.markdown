@@ -3,21 +3,9 @@ layout: post
 status: publish
 published: true
 title: Why Synereo?
-author:
-  display_name: uberadmin
-  login: uberadmin
-  email: grelom@yahoo.com
-  url: ''
-author_login: uberadmin
-author_email: grelom@yahoo.com
-wordpress_id: 162
-wordpress_url: http://blog.synereo.com/?p=162
 date: '2015-02-07 00:50:52 +0200'
-date_gmt: '2015-02-07 00:50:52 +0200'
 categories:
-- Uncategorized
-tags: []
-comments: []
+- blog
 ---
 A new decentralized, distributed social network is emerging, and naturally people are curious. Gideon Rosenblatt earns his keep as Synereo advisory board member by asking the right questions, like: Why Synereo instead of Facebook?
 

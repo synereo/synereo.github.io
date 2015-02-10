@@ -3,23 +3,9 @@ layout: post
 status: publish
 published: true
 title: Synereo  Project Unveiled
-author:
-  display_name: uberadmin
-  login: uberadmin
-  email: grelom@yahoo.com
-  url: ''
-author_login: uberadmin
-author_email: grelom@yahoo.com
-wordpress_id: 14
-wordpress_url: http://blog.synereo.com/?p=14
 date: '2014-10-17 21:16:42 +0300'
-date_gmt: '2014-10-17 21:16:42 +0300'
 categories:
-- Synereo
-- UI
-- Screenshots
-tags: []
-comments: []
+- blog
 ---
 The <a title="Synereo" href="http://www.synereo.com" target="_blank">Synereo</a> project has been in the works for quite some time and we are proud to finally make our efforts public. Synereo represents a new collection of ideas and paradigms, and a very realistic set of changes that we would like to see in our world.
 

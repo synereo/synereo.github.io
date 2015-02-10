@@ -3,24 +3,9 @@ layout: post
 status: publish
 published: true
 title: Hello World!
-author:
-  display_name: uberadmin
-  login: uberadmin
-  email: grelom@yahoo.com
-  url: ''
-author_login: uberadmin
-author_email: grelom@yahoo.com
-wordpress_id: 150
-wordpress_url: http://blog.synereo.com/?p=150
 date: '2015-02-09 12:45:15 +0200'
-date_gmt: '2015-02-09 12:45:15 +0200'
 categories:
-- Synereo
-tags:
-- technology
-- architecture
-- network model
-comments: []
+- blog
 ---
 The Synereo tech team has been hard at work drafting out our final architecture and putting all the tiny little details in our soon-to-be-published whitepaper. We'd like to share some of this information with you and provide updates and teasers about our development plans.
 

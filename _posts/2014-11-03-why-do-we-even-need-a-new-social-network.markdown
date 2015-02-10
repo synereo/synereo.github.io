@@ -3,71 +3,10 @@ layout: post
 status: publish
 published: true
 title: 'The Great Attention Heist, or: How Our Mind Was Hacked'
-author:
-  display_name: uberadmin
-  login: uberadmin
-  email: grelom@yahoo.com
-  url: ''
-author_login: uberadmin
-author_email: grelom@yahoo.com
-wordpress_id: 43
-wordpress_url: http://blog.synereo.com/?p=43
 date: '2014-11-03 15:21:33 +0200'
-date_gmt: '2014-11-03 15:21:33 +0200'
 categories:
-- Synereo
-- Gaming
-- Social Media
-- Analysis
+- blog
 tags: []
-comments:
-- id: 4
-  author: Steve Wright
-  author_email: steve@conches.org
-  author_url: http://www.conches.org
-  date: '2014-11-06 17:40:15 +0200'
-  date_gmt: '2014-11-06 17:40:15 +0200'
-  content: "Thank you for this excellent post.  I have spent my career at the intersection
-    of technology and (to use your term) \"social value\" - high school teacher, corporate
-    foundation at a major software company, technology in international development.
-    I am 50 yrs old and I can remember the Internet before it had pictures - the era
-    of the <a href=\"http://en.wikipedia.org/wiki/Free-net\" title=\"free-net\"
-    rel=\"nofollow\">free-net</a>. Most recently, my work is focused on <a href=\"http://www.ssireview.org/blog/entry/the_tactics_of_collaboration\"
-    title=\"The Tactics of Collaboration | SSIR\" rel=\"nofollow\"> collaboration
-    with the goal of emergence</a>. I see this as the process of bringing together
-    the parts of system - the nodes of a network - to that the whole that is created
-    is greater than the some of its parts. All of this is to say that I am frequently
-    asked about building collaborative platforms.  Setting aside the Field of Dreams
-    problem of build it and they will come, my experience tells me that \"building
-    a collaborative platform\" is non-trivial and no technology will <em>make</em>
-    people collaborate.  However, people do collaborate and we need technology to
-    asynchronously facilitate that collaboration to extend its social value.  As you
-    have very compellingly described above, the social networks we have are not built
-    to maximize the social value of the collaboration but to maximize the profit of
-    the networks owners. I have always been skeptical of gamification and this blog
-    has given me a better way to talk about it. Thank you for that. \r\n\r\nI am eager
-    to work with Synereo. Specifically to facilitate asynchronous collaboration across
-    social enterprises and impact investors and their broad network of stakeholders."
-- id: 358
-  author: Patriciabit seo manager
-  author_email: patricialinser@hotmail.com
-  author_url: http://next-gen-seo-traffic.com
-  date: '2015-01-16 11:30:27 +0200'
-  date_gmt: '2015-01-16 11:30:27 +0200'
-  content: Next time I read a blog, Hopefully it won't fail me just as much as this
-    particular one. After all, I know it was my choice to read through, nonetheless
-    I truly thought you'd have something interesting to say. All I hear is a bunch
-    of complaining about something that you could possibly fix if you weren't too
-    busy looking for attention.
-- id: 626
-  author: Tessa
-  author_email: sheree.ehmann@zoho.com
-  author_url: http://Travis.org
-  date: '2015-02-05 03:10:50 +0200'
-  date_gmt: '2015-02-05 03:10:50 +0200'
-  content: "Do you want to copy articles from other websites rewrite them in seconds
-    and post on your site?\r\nYou can save a lot of writing work, just search in gogle:\r\n\r\nnaptia's
-    rewriter"
 ---
 Why do we need a new social network? Aren't our current networks just fine? People spend hours on Facebook! Surely they're that means they're doing something right.<br />
 ... right?

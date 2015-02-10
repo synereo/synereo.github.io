@@ -3,23 +3,9 @@ layout: post
 status: publish
 published: true
 title: 'Three Ways to Start a Revolution, Part 1: Decentralization'
-author:
-  display_name: uberadmin
-  login: uberadmin
-  email: grelom@yahoo.com
-  url: ''
-author_login: uberadmin
-author_email: grelom@yahoo.com
-wordpress_id: 50
-wordpress_url: http://blog.synereo.com/?p=50
 date: '2014-11-14 00:33:22 +0200'
-date_gmt: '2014-11-14 00:33:22 +0200'
 categories:
-- Synereo
-- Social Media
-tags:
-- Competition
-comments: []
+- blog
 ---
 How do you overthrow the king? Who do you put in his place?
 
