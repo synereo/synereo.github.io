@@ -2846,10 +2846,7 @@ a.toTop {
 	transition:0.2s all linear;
 }
 .ut-footer-so li a  {
-    border:1px solid #999999;
-    -webkit-transition:0.2s all linear;
-	-moz-transition:0.2s all linear;
-	transition:0.2s all linear;
+    
 }
 
 /* #Buttons
