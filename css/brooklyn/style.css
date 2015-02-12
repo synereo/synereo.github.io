@@ -930,7 +930,7 @@ a.ut-flex-control.next:hover { background:rgba(255, 255, 255, 0.15); color:#FFFF
 	font-family: 'ralewayregular', "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 .hero-title.medium {
-	font-family: 'ralewaymedium', "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family: 'Myriad', "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 .hero-title.semibold {
 	font-family: 'ralewaysemibold', "Helvetica Neue", Helvetica, Arial, sans-serif; 
@@ -1148,7 +1148,7 @@ a.ut-flex-control.next:hover { background:rgba(255, 255, 255, 0.15); color:#FFFF
 	-webkit-transition:0.2s background linear;
 	-moz-transition:0.2s background linear;
 	transition:0.2s background linear;
-	font-family: 'ralewaymedium', Helvetica, Arial, sans-serif;
+	font-family: 'Myriad', Helvetica, Arial, sans-serif;
 	text-decoration:none !important;
 }
 .hero-second-btn {
@@ -1346,7 +1346,7 @@ ul.ut-tablet li.show {
 ================================================== */
 
 #navigation {
-	font-family: 'ralewaymedium', Helvetica, Arial, sans-serif;
+	font-family: 'Myriad', Helvetica, Arial, sans-serif;
 	float:right;
 }
 #navigation ul {
@@ -2503,7 +2503,7 @@ ul.sidebar, .widget-container ul {
 	-webkit-transition:0.2s all linear;
 	-moz-transition:0.2s all linear;
 	transition:0.2s all linear;
-	font-family: 'ralewaymedium', Helvetica, Arial, sans-serif;
+	font-family: 'Myriad', Helvetica, Arial, sans-serif;
 }
 .ut-footer-dark .ut-footer-area .widget_tag_cloud a {
 	border:1px solid #777777;
@@ -2915,7 +2915,7 @@ a.toTop {
 	background-clip: padding-box;
 	-webkit-appearance: none;
 	width:auto;
-	font-family: 'ralewaymedium', Helvetica, Arial, sans-serif;
+	font-family: 'Myriad', Helvetica, Arial, sans-serif;
 }
 .light button:hover, .light input[type="submit"]:hover, .light input[type="button"]:hover, .light button:focus, .light input[type="submit"]:focus, .light input[type="button"]:focus {
 	color: #FFFFFF;
@@ -3084,7 +3084,7 @@ button, input[type="button"], input[type="submit"], .dark button, .dark input[ty
 	background-clip: padding-box;
 	-webkit-appearance: none;
 	width:auto;
-	font-family: 'ralewaymedium', Helvetica, Arial, sans-serif;
+	font-family: 'Myriad', Helvetica, Arial, sans-serif;
 }
 button:hover, input[type="submit"]:hover, input[type="button"]:hover, button:focus, input[type="submit"]:focus, input[type="button"]:focus, .dark button:hover, .dark input[type="submit"]:hover, .dark input[type="button"]:hover, .dark button:focus, .dark input[type="submit"]:focus, .dark input[type="button"]:focus {
 	background:#222222;
