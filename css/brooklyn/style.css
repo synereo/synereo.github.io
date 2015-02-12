@@ -1858,7 +1858,7 @@ ul.ut-tablet li.show {
 }
 
 .ut-member-style-3 .member-social a.email:hover {
-	background: transparent url('../../img/social/mail_icon.png') center top no-repeat;
+	background: transparent url('../../img/social/mail_iconGray.png') center top no-repeat;
 }
 
 .ut-member-style-3 .member-social a.twitter:hover {
@@ -1874,7 +1874,7 @@ ul.ut-tablet li.show {
 }
 
 .ut-member-style-3 .member-social a.linkedin:hover {
-	background: transparent url('../../img/social/linkedin_icon.png') center top no-repeat;
+	background: transparent url('../../img/social/linkedin_iconGray.png') center top no-repeat;
 }
 
 .light .ut-member-style-3 .member-social a {
