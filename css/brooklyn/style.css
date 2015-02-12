@@ -1716,21 +1716,25 @@ ul.ut-tablet li.show {
 }
 .member-detail-box {
 }
+
 .ut-member-name {
 	margin-bottom:0;
-	color:#222222;
-	font-size:17px;
+	color:#363434;
+	font-size:22px;
 	font-weight:bold;
 }
+
 .ut-member-title {
 	display:block;
-	font-size:12px;
+	font-size:17px;
+	color: #474747;
 	letter-spacing:0.5px;
 	line-height:150%;
 	text-transform:uppercase;
 	margin-top:5px;
 	margin-bottom:20px;
 }
+
 .team-bio .member-box {
 	text-align:center;
 }
@@ -1825,6 +1829,11 @@ ul.ut-tablet li.show {
 .member-description-style-3 {
 	padding:20px 3px 20px 3px;
 	text-align:center;
+}
+.member-description-style-3 p {
+	color: #404040;
+	font-size: 15px;
+	line-height: 18px;
 }
 .ut-member-style-3 .member-social {
 	position:relative;
