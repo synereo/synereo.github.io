@@ -3595,6 +3595,16 @@ a.ut-flex-control {
     color:#FFFFFF;
 }
 
+.ut-service-icon-box-content span {
+	font-size: 21px;
+	color: #fff;
+}
+
+.ut-service-icon-box-content p {
+	font-size: 15px;
+	color: #b1b1b1;
+}
+
 .icon-campaign {
 	height: 84px;
 	width: 84px;
