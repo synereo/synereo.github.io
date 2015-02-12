@@ -207,6 +207,15 @@
     }
 }
 
+.post-share-buttons{
+    list-style: none;
+    margin-left: 0px;
+}
+
+.post-share-buttons li{
+    display: inline;
+}
+
 .post-content {
     margin-bottom: $spacing-unit;
 
