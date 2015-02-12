@@ -3594,3 +3594,31 @@ a.ut-flex-control {
 .light .ut-project-sc li a:hover {
     color:#FFFFFF;
 }
+
+.icon-nextgen {
+	height: 128px;
+	width: 128px;
+	display: inline-block;
+	background: url("../../img/icons/NextGen_circle.png") center top no-repeat;
+}
+
+.icon-decentralized {
+	height: 128px;
+	width: 128px;
+	display: inline-block;
+	background: url("../../img/icons/FullyDecentralized_circle.png") center top no-repeat;
+}
+
+.icon-bewho {
+	height: 128px;
+	width: 128px;
+	display: inline-block;
+	background: url("../../img/icons/BeWho_circle.png") center top no-repeat;
+}
+
+.icon-yourdata {
+	height: 128px;
+	width: 128px;
+	display: inline-block;
+	background: url("../../img/icons/YourData_circle.png") center top no-repeat;
+}
