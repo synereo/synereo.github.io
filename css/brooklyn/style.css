@@ -3595,6 +3595,42 @@ a.ut-flex-control {
     color:#FFFFFF;
 }
 
+.icon-campaign {
+	height: 84px;
+	width: 84px;
+	display: inline-block;
+	float: left;
+	margin: 0px 17px 23px 0px;
+	background: url("../../img/icons/campaignf_icon.png") no-repeat;
+}
+
+.icon-content {
+	height: 84px;
+	width: 84px;
+	display: inline-block;
+	float: left;
+	margin: 0px 17px 23px 0px;
+	background: url("../../img/icons/content_icon.png") no-repeat;
+}
+
+.icon-reward {
+	height: 84px;
+	width: 84px;
+	display: inline-block;
+	float: left;
+	margin: 0px 17px 23px 0px;
+	background: url("../../img/icons/reward-icon.png") no-repeat;
+}
+
+.icon-powerof {
+	height: 84px;
+	width: 84px;
+	display: inline-block;
+	float: left;
+	margin: 0px 17px 23px 0px;
+	background: url("../../img/icons/PowerOf_icon.png") no-repeat;
+}
+
 .icon-nextgen {
 	height: 128px;
 	width: 128px;
