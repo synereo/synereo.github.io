@@ -1833,15 +1833,50 @@ ul.ut-tablet li.show {
 }
 .ut-member-style-3 .member-social a {
 	color:#DDDDDD;
-	border:1px solid #DDDDDD;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	border-radius:50%;
-	width:40px;
-	-webkit-transition:0.2s all linear;
-	-moz-transition:0.2s all linear;
-	transition:0.2s all linear;
+	width: 42px;
+	height: 42px;
 }
+
+.ut-member-style-3 .member-social a.email {
+	background: transparent url('../../img/social/mail_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.twitter {
+	background: transparent url('../../img/social/twitter_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.facebook {
+	background: transparent url('../../img/social/facebook_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.github {
+	background: transparent url('../../img/social/github_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.linkedin {
+	background: transparent url('../../img/social/linkedin_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.email:hover {
+	background: transparent url('../../img/social/mail_icon.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.twitter:hover {
+	background: transparent url('../../img/social/twitter_iconGray.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.facebook:hover {
+	background: transparent url('../../img/social/facebook_iconGray.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.github:hover {
+	background: transparent url('../../img/social/github-iconGray.png') center top no-repeat;
+}
+
+.ut-member-style-3 .member-social a.linkedin:hover {
+	background: transparent url('../../img/social/linkedin_icon.png') center top no-repeat;
+}
+
 .light .ut-member-style-3 .member-social a {
 	color:#FFFFFF;
 	border:1px solid #FFFFFF;
