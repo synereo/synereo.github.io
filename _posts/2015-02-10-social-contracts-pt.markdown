@@ -2,25 +2,27 @@
 layout: post
 status: publish
 published: true
-title: On social contracts - Pt I
+title: On social contracts - Part I
 date: '2015-02-10 22:37:02 +0200'
 categories:
 - blog
 ---
 In a decentralized, distributed web nobody's in charge. Or rather, everybody's in charge of themselves. How do we get from that place of potential chaos to a self-organizing and civilized web? Person or program, what agents can insist on in a decent(ralized) and polite web is how they are to be engaged if someone wants or needs their engagement. In other words, just as in life, it's all about the protocol. Taking it up one level, it's the web of protocols that make up a more social and socially intelligent notion of contracts -- social contracts, for short -- that make Synereo a civil and self-organizing web, and place where people can engage safely and effectively. (This is part I of a two part blog post.)
 
-<strong>TL;DR: Relax, nobody's in charge.</strong>
+**TL;DR: Relax, nobody's in charge.**
 
-<a href="http://blog.synereo.com/wp-content/uploads/2015/02/MagnaCarta1.jpeg"><img class="alignnone size-full wp-image-176" src="http://blog.synereo.com/wp-content/uploads/2015/02/MagnaCarta1.jpeg" alt="MagnaCarta1" width="174" height="290" /></a>
+![Magna Carta](/img/blog/MagnaCarta1.jpg)
 
-<h4>An introduction to protocols and social contracts</h4><br />
+## An introduction to protocols and social contracts
+
 At the level of human social engagement, people have developed protocols for self-organizing networks. Here's a simple one: introduction. Bonnie and Clyde both know Alice, but they don't know each other. Alice has a strong sense that Bonnie and Clyde ought to get to know one another. It's almost like they were destined to meet. So, she mentions to Bonnie she's got a friend she thinks Bonnie ought to connect with; and, likewise, she mentions to Clyde she's got a friend Clyde ought to connect with. Ever the careful one, though, Alice waits until she gets an affirmation from both parties before she connects them; and, after she's connected them, Bonnie and Clyde can engage directly without using Alice as a broker or go-between.
 
 At least in this case, what's good for people is what's good for agents. This protocol can be formalized to the point where it can be used programmatically to allow for agents to self-organize a higher level decentralized, distributed network over top of one that provides basic communications primitives. Just like people form networks of friends over Facebook or G+ which rely on underlying networks of communications primitives like TCP or HTTP, the introduction protocol, and some pretty obvious variants, can be used in a completely decentralized and distributed manner to let people using Synereo form networks of friends, as well as collegial and professional associations.
 
 Synereo provides a language for describing, analyzing and programmatically enforcing these protocols. That is, a language for social contracts. In fact, a great deal of Synereo is built on that language, and that's what we want to talk about in this post, but not before giving a few more examples.
 
-<h4>Trust but verify</h4><br />
+## Trust but verify
+
 There's something really important about the introduction protocol that might be easy to miss because it's just so familiar. Because Alice waits until she has affirmation from both Bonnie and Clyde before she connects them, they are connected by mutual consent. If introduction was the only way for agents on the network to get connected, the resulting self-organized network would be a network of consent: no connection in the network would be in place without mutual and deliberate consent.
 
 Working within a network of consent has many benefits. For one, it increases the signal to noise ratio. Think about it: when both parties have to deploy attention before a connection is established, that connection already has a different kind of investment in it; and, therefore, at least initially, that connection will be used with more care than if only one party has to consent. In some sense, this is the essence of the difference between broadcast media and two-way media. The effect of prolonged and unbalanced exposure to broadcast media is well established: it leads to feelings of disenfranchisement, disaffection, and alienation. This is what made social media so popular: it was two-way; people were talking to each other; instead of being held hostage to the boobtube, they were riffing on each other's youtube videos.
@@ -31,7 +33,8 @@ Here's an example. Suppose a software shop, say SoftShop, wants to hire a videog
 
 Using the verification protocol in an iterated manner, to verify a series of claims, agents working in a network of mutual consent can bootstrap higher and higher levels of trust, much like people do.
 
-<h4>A language for social contracts</h4><br />
+## A language for social contracts
+
 Developers know that the web has tried on a lot of different protocol fashions. From WSDL to REST, from XML to JSON, from TCP to HTTP, web-based services have a very real need to codify protocol into something executable, something programs can act on. In a decentralized, distributed setting (dds) this gets very interesting. On the one hand, Internet users have come to expect a certain level of reliability in their services. On the other, in a dds what looks to a user like a single service may actually be provided by lots of autonomous sub-services acting together in a concerted manner. To use the introduction protocol above, instead of Facebook telling you who you might connect to, your network of friends and colleagues is suggesting to you who you might want to know. Coordinating a bunch of autonomous services to work together and act as a single reliable service is often times like coordinating a bunch of cats to work together to act as a single reliable cat.
 
 In particular, it's not enough for an agent to say 'you can ask me to do this, or you can ask me to do that, or you can ask me to do this other thing' to get reliable coordination. A language of social contracts also has to speak about the order in which requests can be made or will be fulfilled: before you can start posting to this site, you have to open an account; before you can read a post from this agent, you have to have established a connection with that agent, etc. Neither REST nor WSDL offer this kind of capability, but it is essential to get reliable coordination in a dds.
