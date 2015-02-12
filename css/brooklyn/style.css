@@ -3606,6 +3606,17 @@ a.ut-flex-control {
 	color: #b1b1b1;
 }
 
+.ut-service-column h3 {
+	color: #2eace2;
+	font-size: 19px;
+}
+
+.ut-service-column p {
+	color: #898989;
+	font-size: 15px;
+	line-height: 16.5px;
+}
+
 .icon-campaign {
 	height: 84px;
 	width: 84px;
