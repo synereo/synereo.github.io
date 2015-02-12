@@ -2726,6 +2726,18 @@ ul.sidebar, .widget-container ul {
 	padding:30px 30px 10px 30px;
 	background:rgba(255, 255, 255, 0.15);
 }
+.ut-left-footer-area h3 {
+	font-size: 23px;
+	color: #fff;
+}
+.ut-right-footer-area h3 {
+	font-size: 23px;
+	color: #fff;
+}
+.ut-right-footer-area label {
+	font-size: 15px;
+	color: #fff;
+}
 .ut-left-footer-area {
 	margin-bottom:0;
 }
