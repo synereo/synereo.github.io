@@ -1,7 +1,8 @@
-.green {
-    background-color: hsl(120deg, 10%, 85%);
-}
-
-.red {
-    background-color: hsl(120deg, 10%, 75%);
+body {
+    section:nth-child(odd) {
+        background-color: hsl(120deg, 10%, 85%);
+    }
+    section:nth-child(even) {
+        background-color: hsl(120deg, 10%, 75%);
+    }
 }
