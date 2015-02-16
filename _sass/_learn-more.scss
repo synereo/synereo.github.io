@@ -1,8 +1,62 @@
+@font-face {
+    font-family: 'Myriad';
+    src: url('/fonts/myriad.eot');
+    src: url('/fonts/myriad.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/myriad.woff') format('woff'),
+         url('/fonts/myriad.ttf') format('truetype'),
+         url('/fonts/myriad.svg#Myriad') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    section:nth-child(odd) {
-        background-color: hsl(120deg, 10%, 85%);
+    font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    h2, h3 {
+        text-transform: uppercase;
     }
-    section:nth-child(even) {
-        background-color: hsl(120deg, 10%, 75%);
+
+    section {
+        color: #fff;
+    }
+
+    section.attention-model {
+        background-color: #000;
+        h2 { color: #2face2; }
+        p {color: #fff; }
+    }
+
+    section.reo {
+        background-color: #b1b1b1;
+    }
+
+    section.current {
+        background-color: #404040;
+    }
+
+    section.amps {
+        background-color: #2face2;
+        h2 { color: #fff; }
+        p { color: #000; }
+    }
+
+    section.technology {
+        background-color: #000;
+        h2 { color: #ff9000; }
+        p {color: #fff; }
+    }
+
+    section.dendronet {
+        background-color: #b1b1b1;
+    }
+
+    section.specialk {
+        background-color: #404040;
+    }
+
+    section.smart-contracts {
+        background-color: #ff9000;
+        h2 { color: #fff; }
+        p { color: #000; }
     }
 }
