@@ -10,28 +10,37 @@
 }
 
 body {
+    font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
+
     nav.sidebar {
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.9);
         right: 0;
         width: 270px;
         height: 100%;
         color: #fff;
         ul {
+            padding-top: 30px;
             padding-left: 0px;
             li {
                 list-style: none;
+                padding-left: 20px;
+                line-height: 2em;
             }
             li.attention-model {
                 color: #2face2;
             }
+            li.attention-model-active {
+                background-color: rgba(47, 172, 226, 0.6);
+            }
             li.technology {
                 color: #ff9000;
             }
+            li.technology-active {
+                background-color: rgba(255, 144, 0, 0.6);
+            }
         }
     }
-
-    font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
 
     h2, h3 {
         text-transform: uppercase;
