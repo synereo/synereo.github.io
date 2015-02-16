@@ -10,6 +10,27 @@
 }
 
 body {
+    nav.sidebar {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        right: 0;
+        width: 270px;
+        height: 100%;
+        color: #fff;
+        ul {
+            padding-left: 0px;
+            li {
+                list-style: none;
+            }
+            li.attention-model {
+                color: #2face2;
+            }
+            li.technology {
+                color: #ff9000;
+            }
+        }
+    }
+
     font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
 
     h2, h3 {
