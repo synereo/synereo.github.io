@@ -28,13 +28,13 @@ body {
                 line-height: 2em;
             }
             li.attention-model {
-                color: #2face2;
+                color: $synereo-blue;
             }
             li.attention-model-active {
                 background-color: rgba(47, 172, 226, 0.6);
             }
             li.technology {
-                color: #ff9000;
+                color: $synereo-orange;
             }
             li.technology-active {
                 background-color: rgba(255, 144, 0, 0.6);
@@ -48,9 +48,6 @@ body {
 
     section {
         color: #fff;
-        p {
-            font-size: 1.45em;
-        }
     }
 
     section.attention-model {
@@ -59,40 +56,43 @@ body {
         background-size: cover;
         height: 400px;
         padding-top: 110px;
-        h2 { color: #2face2; }
-        p { color: #fff; }
+        h2 { color: $synereo-blue; }
+        p {
+            color: #fff;
+            font-size: 1.45em;
+        }
     }
 
     section.reo {
-        background-color: #b1b1b1;
+        background-color: $synereo-light-gray-bg;
     }
 
     section.current {
-        background-color: #404040;
+        background-color: $synereo-dark-gray-bg;
     }
 
     section.amps {
-        background-color: #2face2;
+        background-color: $synereo-blue;
         h2 { color: #fff; }
         p { color: #000; }
     }
 
     section.technology {
         background-color: #000;
-        h2 { color: #ff9000; }
+        h2 { color: $synereo-orange; }
         p {color: #fff; }
     }
 
     section.dendronet {
-        background-color: #b1b1b1;
+        background-color: $synereo-light-gray-bg;
     }
 
     section.specialk {
-        background-color: #404040;
+        background-color: $synereo-dark-gray-bg;
     }
 
     section.smart-contracts {
-        background-color: #ff9000;
+        background-color: $synereo-orange-bg;
         h2 { color: #fff; }
         p { color: #000; }
     }
