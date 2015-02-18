@@ -48,14 +48,19 @@ body {
 
     section {
         color: #fff;
+        p {
+            font-size: 1.45em;
+        }
     }
 
     section.attention-model {
         background-color: #000;
         background: url(/img/bg/axon.jpg) no-repeat;
-        height: 300px;
+        background-size: cover;
+        height: 400px;
+        padding-top: 110px;
         h2 { color: #2face2; }
-        p {color: #fff; }
+        p { color: #fff; }
     }
 
     section.reo {
