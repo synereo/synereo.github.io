@@ -12,6 +12,31 @@
 body {
     font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
 
+    nav.topbar {
+        background-color: #000;
+        span {
+            img {
+                padding: 9px 0px 5px 6px;
+                height: 60px;
+            }
+        }
+        ul {
+            float: right;
+            padding-top: 17px;
+            li {
+                padding-left: 19px;
+                a {
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+                a:hover {
+                    color: $synereo-blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
     nav.sidebar {
         position: fixed;
         background-color: rgba(0, 0, 0, 0.7);
