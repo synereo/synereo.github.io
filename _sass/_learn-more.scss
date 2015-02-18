@@ -79,8 +79,15 @@ body {
 
     section.technology {
         background-color: #000;
+        background: url(/img/bg/synapse.jpg) no-repeat;
+        background-size: cover;
+        height: 400px;
+        padding-top: 60px;
         h2 { color: $synereo-orange; }
-        p {color: #fff; }
+        p {
+            color: #fff;
+            font-size: 1.45em;
+        }
     }
 
     section.dendronet {
@@ -95,5 +102,9 @@ body {
         background-color: $synereo-orange-bg;
         h2 { color: #fff; }
         p { color: #000; }
+    }
+
+    section.censorship-resilience {
+        background-color: $synereo-dark-gray-bg;
     }
 }
