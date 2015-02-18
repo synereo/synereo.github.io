@@ -48,6 +48,8 @@ body {
 
     section {
         color: #fff;
+        padding-top: 15px;
+        padding-bottom: 40px;
     }
 
     section.attention-model {
@@ -65,6 +67,26 @@ body {
 
     section.reo {
         background-color: $synereo-light-gray-bg;
+    }
+
+    .light-gray-gradient {
+        background: $synereo-light-gray-bg;
+        background: -moz-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%, darken($synereo-light-gray-bg, 9%) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$synereo-light-gray-bg), color-stop(100%,darken($synereo-light-gray-bg, 9%)));
+        background: -webkit-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
+        background: -o-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
+        background: -ms-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
+        background: radial-gradient(ellipse at center,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
+    }
+
+    .dark-gray-gradient {
+        background: $synereo-dark-gray-bg;
+        background: -moz-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%, darken($synereo-dark-gray-bg, 9%) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$synereo-dark-gray-bg), color-stop(100%,darken($synereo-dark-gray-bg, 9%)));
+        background: -webkit-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
+        background: -o-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
+        background: -ms-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
+        background: radial-gradient(ellipse at center,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
     }
 
     section.current {
