@@ -154,4 +154,26 @@ body {
     section.censorship-resilience {
         background-color: $synereo-dark-gray-bg;
     }
+
+    footer.solution {
+        background-color: #000;
+        background: url(/img/bg/net.jpg) no-repeat;
+        background-size: cover;
+        height: 400px;
+        padding-top: 20px;
+
+        .title {
+            text-align: center;
+            h2, h4 { color: $synereo-blue; }
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.45em;
+        }
+
+        .footer-cube {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
 }
