@@ -155,7 +155,7 @@ body {
         background-color: $synereo-dark-gray-bg;
     }
 
-    footer.solution {
+    section.solution {
         background-color: #000;
         background: url(/img/bg/net.jpg) no-repeat;
         background-size: cover;
@@ -172,8 +172,23 @@ body {
             font-size: 1.45em;
         }
 
-        .footer-cube {
-            background: rgba(255, 255, 255, 0.2);
+        .cube-row {
+            padding-top: 40px;
         }
+
+        .footer-cube {
+            padding: 1px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+
+    footer {
+        background-color: #121212;
+        text-align: center;
+        padding-top: 20px;
+        height: 90px;
     }
 }
