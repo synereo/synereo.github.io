@@ -17,7 +17,7 @@
   </head>
   <body>
 
-    <nav class="sidebar" data-spy="affix" data-offset-top="60" data-offset-bottom="490">
+    <nav class="sidebar">
       <ul>
         <li class="attention-model">Attention Economy Model</li>
         <li>Reo</li>
@@ -176,7 +176,20 @@
           <div class="col-md-4">
             <div class="footer-cube">
               <h3>Sign up for updates</h3>
-              <p>Get updated here.</p>
+              <form action="//synereo.us9.list-manage.com/subscribe/post?u=ae1fbeb3801174c1ec952ce8b&amp;id=d723ef8fe9" method="post" class="subscribe" target="_blank">
+                <div class="form-group">
+                  <label for="subscribe-rmeil">Name</label>
+                  <input type="text" id="subscribe-email">
+                </div>
+                <div class="form-group">
+                  <label for="subscribe-text">Email</label>
+                  <input type="email" id="subscribe-text">
+                </div>
+                <div class="form-group" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_ae1fbeb3801174c1ec952ce8b_d723ef8fe9" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="btn btn-default">Send</button>
+              </form>
             </div>
           </div>
         </div>
@@ -196,9 +209,17 @@
       </div>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script>
+      $('nav.sidebar').affix({
+        offset: {
+          top: 60,
+          bottom: function () {
+            return (this.bottom = $('footer').outerHeight(true) + $('section.solution').outerHeight(true))
+          }
+        }
+      })
+    </script>
   </body>
 </html>

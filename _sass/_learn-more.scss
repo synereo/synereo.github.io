@@ -169,7 +169,6 @@ body {
         background-color: #000;
         background: url(/img/bg/net.jpg) no-repeat;
         background-size: cover;
-        height: 400px;
         padding-top: 20px;
 
         .title {
@@ -188,9 +187,27 @@ body {
 
         .footer-cube {
             padding: 1px 15px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             h3 {
                 color: #fff;
+            }
+        }
+
+        form.subscribe {
+            padding-bottom: 7px;
+            label {
+                text-transform: uppercase;
+            }
+            input {
+                display: block;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                transition: background 0.2s linear 0s;
+                border: 0px;
+                padding: 7px;
+            }
+            input:focus {
+                background: rgba(0, 0, 0, 0.8);
             }
         }
     }
