@@ -11,6 +11,7 @@
 
 body {
     font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: relative;
 
     nav.topbar {
         background-color: #000;
@@ -57,21 +58,27 @@ body {
         ul {
             padding-top: 30px;
             padding-left: 0px;
+            a {
+                color: #fff;
+                padding-left: 20px;
+            }
             li {
                 list-style: none;
-                padding-left: 20px;
-                line-height: 2em;
+                line-height: 0.7em;
             }
-            li.attention-model {
+            li a:focus, li a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            li.attention-economy-h a {
                 color: $synereo-blue;
             }
-            li.attention-model-active {
+            li.attention-economy.active {
                 background-color: rgba(47, 172, 226, 0.6);
             }
-            li.technology {
+            li.technology-h a {
                 color: $synereo-orange;
             }
-            li.technology-active {
+            li.technology.active {
                 background-color: rgba(255, 144, 0, 0.6);
             }
         }
