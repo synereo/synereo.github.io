@@ -197,7 +197,7 @@ body {
         }
 
         form.subscribe {
-            padding-bottom: 7px;
+            padding-bottom: 13px;
             label {
                 text-transform: uppercase;
             }
@@ -211,6 +211,17 @@ body {
             }
             input:focus {
                 background: rgba(0, 0, 0, 0.8);
+            }
+            button {
+                border-radius: 2px;
+                line-height: 1;
+                padding: 6px 8px;
+                background: $synereo-blue;
+                color: #fff;
+                border: 0px;
+            }
+            button:hover {
+                background: darken($synereo-blue, 15%);
             }
         }
     }
