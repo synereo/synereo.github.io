@@ -74,14 +74,14 @@ body {
             }
             li.attention-economy.active {
                 background-color: rgba(47, 172, 226, 0.4);
-                background: linear-gradient(rgba(47, 172, 226, 0.4) 0%,darken(rgba(47, 172, 226, 0.4), 30%) 100%);
+                background: linear-gradient(rgba(47, 172, 226, 0.4) 0%,darken(rgba(47, 172, 226, 0.4), 20%) 100%);
             }
             li.technology-h a {
                 color: $synereo-orange;
             }
             li.technology.active {
                 background-color: rgba(255, 144, 0, 0.4);
-                background: linear-gradient(rgba(255, 144, 0, 0.4) 0%,darken(rgba(255, 144, 0, 0.4), 30%) 100%);
+                background: linear-gradient(rgba(255, 144, 0, 0.4) 0%,darken(rgba(255, 144, 0, 0.4), 20%) 100%);
             }
         }
     }
