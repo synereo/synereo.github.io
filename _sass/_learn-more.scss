@@ -96,10 +96,21 @@ body {
         color: #fff;
         padding-top: 45px;
         padding-bottom: 60px;
-
         p.extra-margin {
             margin-bottom: 110px;
         }
+    }
+
+    div.attention-model p em {
+        display: block;
+        text-transform: uppercase;
+        color: $synereo-blue;
+    }
+
+    div.technology p em {
+        display: block;
+        text-transform: uppercase;
+        color: $synereo-orange;
     }
 
     section.attention-model {
