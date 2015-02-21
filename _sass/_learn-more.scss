@@ -74,12 +74,14 @@ body {
             }
             li.attention-economy.active {
                 background-color: rgba(47, 172, 226, 0.4);
+                background: linear-gradient(rgba(47, 172, 226, 0.4) 0%,darken(rgba(47, 172, 226, 0.4), 30%) 100%);
             }
             li.technology-h a {
                 color: $synereo-orange;
             }
             li.technology.active {
                 background-color: rgba(255, 144, 0, 0.4);
+                background: linear-gradient(rgba(255, 144, 0, 0.4) 0%,darken(rgba(255, 144, 0, 0.4), 30%) 100%);
             }
         }
     }
@@ -117,21 +119,11 @@ body {
 
     .light-gray-gradient {
         background: $synereo-light-gray-bg;
-        background: -moz-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%, darken($synereo-light-gray-bg, 9%) 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$synereo-light-gray-bg), color-stop(100%,darken($synereo-light-gray-bg, 9%)));
-        background: -webkit-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
-        background: -o-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
-        background: -ms-radial-gradient(center, ellipse cover,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
         background: radial-gradient(ellipse at center,  $synereo-light-gray-bg 0%,darken($synereo-light-gray-bg, 9%) 100%);
     }
 
     .dark-gray-gradient {
         background: $synereo-dark-gray-bg;
-        background: -moz-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%, darken($synereo-dark-gray-bg, 9%) 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$synereo-dark-gray-bg), color-stop(100%,darken($synereo-dark-gray-bg, 9%)));
-        background: -webkit-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
-        background: -o-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
-        background: -ms-radial-gradient(center, ellipse cover,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
         background: radial-gradient(ellipse at center,  $synereo-dark-gray-bg 0%,darken($synereo-dark-gray-bg, 9%) 100%);
     }
 
