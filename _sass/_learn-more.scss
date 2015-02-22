@@ -64,6 +64,9 @@ body {
                 color: #fff;
                 padding-left: 20px;
             }
+            a:active, a:focus {
+                outline: none;
+            }
             li {
                 list-style: none;
                 line-height: 0.7em;
