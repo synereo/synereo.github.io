@@ -120,12 +120,17 @@ body {
         background-color: #000;
         background: url(/img/bg/axon.jpg) no-repeat;
         background-size: cover;
-        height: 400px;
         padding-top: 110px;
+        padding-bottom: 0px;
         h2 { color: $synereo-blue; }
         p {
             color: #fff;
             font-size: 1.45em;
+            margin-bottom: 100px;
+        }
+        div.infographics {
+            background-color: rgba(255, 255, 255, 0.3);
+            text-align: center;
         }
     }
 
@@ -157,12 +162,17 @@ body {
         background-color: #000;
         background: url(/img/bg/synapse.jpg) no-repeat;
         background-size: cover;
-        height: 430px;
         padding-top: 90px;
+        padding-bottom: 0px;
         h2 { color: $synereo-orange; }
         p {
             color: #fff;
             font-size: 1.45em;
+            margin-bottom: 100px;
+        }
+        div.infographics {
+            background-color: rgba(255, 255, 255, 0.3);
+            text-align: center;
         }
     }
 
