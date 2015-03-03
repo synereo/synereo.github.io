@@ -17,7 +17,7 @@
   </head>
   <body data-spy="scroll" data-target=".sidebar" data-offset="200">
 
-    <nav class="sidebar">
+    <!-- <nav class="sidebar">
       <ul class="nav" role="tablist">
         <li class="attention-economy attention-economy-h"><a href="#attention-economy">Attention Economy Model</a></li>
         <li class="attention-economy"><a href="#reo">Reo</a></li>
@@ -32,7 +32,7 @@
         <li class="technology"><a href="#censorship-resilience">Censorship Resilience</a></li>
         <li class="technology"><a href="#gateways">Gateways</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <nav class="topbar">
       <div class="container-fluid">
@@ -221,6 +221,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/jquery/jquery.sticky.js"></script>
     <script>
       $('nav.sidebar').affix({
         offset: {
@@ -230,6 +231,24 @@
           }
         }
       });
+
+      $(document).ready(function(){
+        $('section.attention-model').sticky({
+          topSpacing: 60-$('section.attention-model div.infographics').position().top,
+          className: 'sticky'
+        });
+      });
+
+      // $('section.attention-model div.infographics').affix({
+      //   offset: {
+      //     top: function () {
+      //       return (this.top = $('section.attention-model div.infographics').position().top)
+      //     },
+      //     bottom: function () {
+      //       return (this.bottom = $(document) - $('div.technology').position().top)
+      //     }
+      //   }
+      // })
 
       $("ul.nav li a[href^='#']").on('click', function(e) {
          e.preventDefault();

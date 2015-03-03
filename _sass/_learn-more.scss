@@ -134,6 +134,17 @@ body {
         }
     }
 
+    div.sticky {
+        position: absolute;
+        z-index: 1000;
+    }
+
+    // div.infographics.affix-top { }
+    // div.infographics.affix {
+    //     position: fixed;
+    // }
+    // div.infographics.affix-bottom { }
+
     section.reo {
         background-color: $synereo-light-gray-bg;
     }
