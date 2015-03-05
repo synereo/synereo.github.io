@@ -244,7 +244,22 @@
       })
 
       $('section.attention-model').on('affix.bs.affix', function () {
-        $('section.attention-model').css('top', -420);
+        $('section.attention-model').css({
+          'top': -420,
+          'z-index': 2000,
+        });
+        $('section.reo').css('margin-top', $('section.attention-model').height() + $('nav.topbar').height() + 50)
+      });
+
+      $('section.attention-model').on('affix-top.bs.affix', function () {
+        $('section.attention-model').css({
+          // 'top': 0
+        });
+        $('section.reo').css('margin-top', 0)
+      });
+
+      $('section.attention-model').on('affix-bottom.bs.affix', function () {
+
       });
 
       $("ul.nav li a[href^='#']").on('click', function(e) {
