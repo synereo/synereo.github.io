@@ -232,6 +232,21 @@
         }
       });
 
+      $('section.attention-model').affix({
+        offset: {
+          top: function () {
+            return (this.top = $('section.attention-model div.infographics').position().top)
+          },
+          bottom: function () {
+            return (this.bottom = $(document) - $('div.technology').position().top)
+          }
+        }
+      })
+
+      $('section.attention-model').on('affix.bs.affix', function () {
+        $('section.attention-model').css('top', -420);
+      });
+
       $("ul.nav li a[href^='#']").on('click', function(e) {
          e.preventDefault();
          var hash = this.hash;
