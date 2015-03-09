@@ -105,6 +105,9 @@ body {
 
     nav.sidebar.collapze {
         width: 0px;
+        ul {
+            display: none;
+        }
     }
 
     h2, h3 {
