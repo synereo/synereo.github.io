@@ -17,7 +17,7 @@
   </head>
   <body data-spy="scroll" data-target=".sidebar" data-offset="200">
 
-    <!-- <nav class="sidebar">
+    <nav class="sidebar">
       <ul class="nav" role="tablist">
         <li class="attention-economy attention-economy-h"><a href="#attention-economy">Attention Economy Model</a></li>
         <li class="attention-economy"><a href="#reo">Reo</a></li>
@@ -32,7 +32,7 @@
         <li class="technology"><a href="#censorship-resilience">Censorship Resilience</a></li>
         <li class="technology"><a href="#gateways">Gateways</a></li>
       </ul>
-    </nav> -->
+    </nav>
 
     <nav class="topbar">
       <div class="container-fluid">
@@ -232,16 +232,16 @@
         }
       });
 
-      $('section.attention-model').affix({
-        offset: {
-          top: function () {
-            return (this.top = $('section.attention-model div.infographics').position().top)
-          },
-          bottom: function () {
-            return (this.bottom = $('div.technology').position().top)
-          }
-        }
-      })
+      // $('section.attention-model').affix({
+      //   offset: {
+      //     top: function () {
+      //       return (this.top = $('section.attention-model div.infographics').position().top)
+      //     },
+      //     bottom: function () {
+      //       return (this.bottom = $('div.technology').position().top)
+      //     }
+      //   }
+      // })
 
       $('section.attention-model').on('affix.bs.affix', function () {
         $('section.attention-model').css({
