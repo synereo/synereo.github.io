@@ -57,6 +57,12 @@ body {
         width: 270px;
         height: 100%;
         color: #fff;
+        div.close {
+            position: absolute;
+            left: -20px;
+            width: 20px;
+            background: #ff0000;
+        }
         ul {
             padding-top: 30px;
             padding-left: 0px;
@@ -95,6 +101,10 @@ body {
         nav.sidebar {
             display: none;
         }
+    }
+
+    nav.sidebar.collapze {
+        width: 0px;
     }
 
     h2, h3 {
