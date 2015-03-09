@@ -91,6 +91,12 @@ body {
         }
     }
 
+    @media all and (max-width: 1000px) {
+        nav.sidebar {
+            display: none;
+        }
+    }
+
     h2, h3 {
         text-transform: uppercase;
     }
