@@ -238,17 +238,17 @@
             return (this.top = $('section.attention-model div.infographics').position().top)
           },
           bottom: function () {
-            return (this.bottom = $(document) - $('div.technology').position().top)
+            return (this.bottom = $('div.technology').position().top)
           }
         }
       })
 
       $('section.attention-model').on('affix.bs.affix', function () {
         $('section.attention-model').css({
-          'top': -420,
+          'top': $('section.attention-model').position().top - $('section.attention-model div.infographics').position().top,
           'z-index': 2000,
         });
-        $('section.reo').css('margin-top', $('section.attention-model').height() + $('nav.topbar').height() + 50)
+        $('section.reo').css('margin-top', $('section.reo').position().top - $('nav.topbar').outerHeight())
       });
 
       $('section.attention-model').on('affix-top.bs.affix', function () {
@@ -259,7 +259,10 @@
       });
 
       $('section.attention-model').on('affix-bottom.bs.affix', function () {
-
+        $('section.attention-model').css({
+          // 'position': 'relative',
+          // 'bottom': $('section.technology').position().top
+        });
       });
 
       $("ul.nav li a[href^='#']").on('click', function(e) {
