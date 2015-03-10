@@ -145,19 +145,34 @@ body {
                     display: inline-block;
                 }
                 a.email {
-                    background: url("/img/social/mail_icon.png") no-repeat scroll center top transparent;
+                    background: url("/img/social/mail.png") no-repeat scroll center top transparent;
                 }
                 a.linkedin {
-                    background: url("/img/social/linkedin_icon.png") no-repeat scroll center top transparent;
+                    background: url("/img/social/linkedin.png") no-repeat scroll center top transparent;
                 }
                 a.github {
-                    background: url("/img/social/github_icon.png") no-repeat scroll center top transparent;
+                    background: url("/img/social/github.png") no-repeat scroll center top transparent;
                 }
                 a.twitter {
-                    background: url("/img/social/twitter_icon.png") no-repeat scroll center top transparent;
+                    background: url("/img/social/twitter.png") no-repeat scroll center top transparent;
                 }
                 a.facebook {
-                    background: url("/img/social/facebook_icon.png") no-repeat scroll center top transparent;
+                    background: url("/img/social/facebook.png") no-repeat scroll center top transparent;
+                }
+                a.email:hover {
+                    background: url("/img/social/mail_g.png") no-repeat scroll center top transparent;
+                }
+                a.linkedin:hover {
+                    background: url("/img/social/linkedin_g.png") no-repeat scroll center top transparent;
+                }
+                a.github:hover {
+                    background: url("/img/social/github_g.png") no-repeat scroll center top transparent;
+                }
+                a.twitter:hover {
+                    background: url("/img/social/twitter_g.png") no-repeat scroll center top transparent;
+                }
+                a.facebook:hover {
+                    background: url("/img/social/facebook_g.png") no-repeat scroll center top transparent;
                 }
             }
         }
