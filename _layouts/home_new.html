@@ -211,6 +211,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
-    <script></script>
+    <script>
+    $(document).ready(function() {
+      $('div.team-member img').hover(
+        function() {
+          $(this).attr('src', $(this).attr('src').replace('.jpg', '_h.jpg'));
+        },
+        function() {
+          $(this).attr('src', $(this).attr('src').replace('_h.jpg', '.jpg'));
+        }
+      );
+    });</script>
   </body>
 </html>
