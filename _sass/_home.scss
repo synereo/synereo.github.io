@@ -42,7 +42,15 @@ body {
     section.main-graphic {
         background: url(/img/uploads/Synereo1.jpg) no-repeat;
         background-size: cover;
+        background-position: center;
         height: 500px;
+    }
+
+    section.your-network {
+        background: url(/img/uploads/YourNetwork_title.jpg) no-repeat;
+        background-color: $synereo-dark-gray-bg;
+        background-position: center;
+        height: 130px;
     }
 
     section.solution {
