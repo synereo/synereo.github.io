@@ -74,6 +74,22 @@ body {
         }
     }
 
+    section.network {
+        background-color: $synereo-dark-gray-bg;
+        padding-top: 45px;
+        padding-bottom: 35px;
+        div.feature {
+            text-align: center;
+            h3 {
+                color: #fff;
+            }
+            p {
+                color: #b1b1b1;
+                font-size: 1.2em;
+            }
+        }
+    }
+
     section.solution {
         background-color: #000;
         background: url(/img/bg/net.jpg) no-repeat;
