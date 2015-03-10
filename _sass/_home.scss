@@ -108,6 +108,10 @@ body {
 
     section.economy {
         background-color: rgb(34, 34, 34);
+        padding: 30px 20px 40px 10px;
+        div.graphic {
+            text-align: center;
+        }
         div.bullet {
             clear: both;
             img {
