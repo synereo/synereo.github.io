@@ -106,6 +106,19 @@ body {
         padding-left: 40px;
     }
 
+    section.economy {
+        background-color: $synereo-dark-gray-bg;
+        div.bullet {
+            clear: both;
+            img {
+                float: left;
+            }
+            h3 {
+                color: $synereo-blue;
+            }
+        }
+    }
+
     section.solution {
         background-color: #000;
         background: url(/img/bg/net.jpg) no-repeat;
