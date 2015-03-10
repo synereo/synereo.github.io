@@ -53,6 +53,27 @@ body {
         height: 130px;
     }
 
+    section.evolution {
+        background: url(/img/uploads/network.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        text-align: center;
+        padding-top: 200px;
+        div {
+            font-size: 5em;
+            color: #fff;
+        }
+        div.t1 {
+            letter-spacing: 0.1em;
+
+        }
+        div.t2 {
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+    }
+
     section.solution {
         background-color: #000;
         background: url(/img/bg/net.jpg) no-repeat;
