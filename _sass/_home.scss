@@ -129,7 +129,7 @@ body {
     section.team {
         background-color: $synereo-blue;
         padding-top: 30px;
-        padding-bottom: 20px;
+        padding-bottom: 70px;
         div.team-member {
             text-align: center;
             h3 {
@@ -139,6 +139,32 @@ body {
                 border-radius: 115px;
                 box-shadow: 0 0 0 3px #ff9000,
                             0 0 0 9px #484949;
+            }
+            div.social {
+                padding-top: 13px;
+                padding-bottom: 11px;
+                border-bottom: 1px solid #fff;
+                a {
+                    height: 42px;
+                    width: 42px;
+                    margin: 3px 7px;
+                    display: inline-block;
+                }
+                a.email {
+                    background: url("/img/social/mail_icon.png") no-repeat scroll center top transparent;
+                }
+                a.linkedin {
+                    background: url("/img/social/linkedin_icon.png") no-repeat scroll center top transparent;
+                }
+                a.github {
+                    background: url("/img/social/github_icon.png") no-repeat scroll center top transparent;
+                }
+                a.twitter {
+                    background: url("/img/social/twitter_icon.png") no-repeat scroll center top transparent;
+                }
+                a.facebook {
+                    background: url("/img/social/facebook_icon.png") no-repeat scroll center top transparent;
+                }
             }
         }
     }
