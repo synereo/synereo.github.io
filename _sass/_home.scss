@@ -107,14 +107,21 @@ body {
     }
 
     section.economy {
-        background-color: $synereo-dark-gray-bg;
+        background-color: rgb(34, 34, 34);
         div.bullet {
             clear: both;
             img {
                 float: left;
+                padding-right: 21px;
+                padding-bottom: 29px;
             }
             h3 {
                 color: $synereo-blue;
+                font-size: 1.4em;
+            }
+            p {
+                color: #898989;
+                font-size: 1.2em;
             }
         }
     }
