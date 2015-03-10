@@ -164,9 +164,8 @@ body {
     }
 
     section.solution {
-        background-color: #000;
-        background: url(/img/bg/net.jpg) no-repeat;
-        background-size: cover;
+        min-height: 500px;
+        background: transparent;
         padding-top: 20px;
 
         .title {
