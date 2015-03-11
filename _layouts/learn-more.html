@@ -267,12 +267,21 @@
         function update_infographics() {
           var scrolltop = $window.scrollTop();
           var infographicstop = $('div.infographics').position().top;
+          var infographicsheight = $('div.infographics').height();
+          var techoffsettop = $('section.technology').offset().top;
+          var $infographicsfixed = $('section.attention-model-fixed');
 
           if (scrolltop > infographicstop) {
-            $('section.attention-model-fixed').show();
+            $infographicsfixed.show();
+            if (scrolltop + infographicsheight > techoffsettop) {
+              var affixoffset = scrolltop + infographicsheight - techoffsettop;
+              $infographicsfixed.css({
+                'top': $('div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 50 - affixoffset
+              })
+            }
           }
           if (scrolltop < infographicstop) {
-            $('section.attention-model-fixed').hide();
+            $infographicsfixed.hide();
           }
 
         }
