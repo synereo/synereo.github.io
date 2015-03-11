@@ -150,6 +150,12 @@ body {
         div.infographics {
             text-align: center;
         }
+        div.infographics-fixed {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: none;
+        }
     }
 
     section.attention-model.affix-bottom {

@@ -17,7 +17,7 @@
   </head>
   <body data-spy="scroll" data-target=".sidebar" data-offset="200">
 
-    <nav class="sidebar">
+    <!-- <nav class="sidebar">
       <div class="close">X</div>
       <ul class="nav" role="tablist">
         <li class="attention-economy attention-economy-h"><a href="#attention-economy">Attention Economy Model</a></li>
@@ -33,7 +33,7 @@
         <li class="technology"><a href="#censorship-resilience">Censorship Resilience</a></li>
         <li class="technology"><a href="#gateways">Gateways</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <nav class="topbar">
       <div class="container-fluid">
@@ -62,6 +62,9 @@
         </div>
         <div class="infographics">
           <img src="/img/infographics/basic.png">
+        </div>
+        <div class="infographics-fixed">
+          <img src="/img/infographics/basicBG.png">
         </div>
       </section>
 
@@ -224,61 +227,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script>
-      $('nav.sidebar').affix({
-        offset: {
-          top: 60,
-          bottom: function () {
-            return (this.bottom = $('footer').outerHeight(true) + $('section.solution').outerHeight(true))
+      $(document).ready(function() {
+        $('nav.sidebar').affix({
+          offset: {
+            top: 60,
+            bottom: function () {
+              return (this.bottom = $('footer').outerHeight(true) + $('section.solution').outerHeight(true))
+            }
           }
+        });
+
+        $("ul.nav li a[href^='#']").on('click', function(e) {
+           e.preventDefault();
+           var hash = this.hash;
+           $('html, body').animate({
+             scrollTop: $(hash).offset().top
+           }, 300, function(){
+             window.location.hash = hash;
+           });
+        });
+
+        $('nav.sidebar div.close').click(function() {
+          $('nav.sidebar').toggleClass('collapze');
+        });
+
+        // infographics affix stuff
+        $window = $(window);
+
+        $clone = $('section.attention-model').clone();
+        $clone.addClass('attention-model-fixed');
+        $clone.insertAfter($('section.attention-model'));
+        $clone.css({
+          'position': 'fixed',
+          'display': 'none',
+          'top': $('div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 50,
+          'z-index': 100
+        });
+
+        function update_infographics() {
+          var scrolltop = $window.scrollTop();
+          var infographicstop = $('div.infographics').position().top;
+
+          if (scrolltop > infographicstop) {
+            $('section.attention-model-fixed').show();
+          }
+          if (scrolltop < infographicstop) {
+            $('section.attention-model-fixed').hide();
+          }
+
         }
-      });
 
-      // $('section.attention-model').affix({
-      //   offset: {
-      //     top: function () {
-      //       return (this.top = $('section.attention-model div.infographics').position().top)
-      //     },
-      //     bottom: function () {
-      //       return (this.bottom = $('div.technology').position().top)
-      //     }
-      //   }
-      // })
+        $window.bind('scroll', update_infographics).resize(update_infographics);
 
-      $('section.attention-model').on('affix.bs.affix', function () {
-        $('section.attention-model').css({
-          'top': $('section.attention-model').position().top - $('section.attention-model div.infographics').position().top,
-          'z-index': 2000,
-        });
-        $('section.reo').css('margin-top', $('section.reo').position().top - $('nav.topbar').outerHeight())
-      });
-
-      $('section.attention-model').on('affix-top.bs.affix', function () {
-        $('section.attention-model').css({
-          // 'top': 0
-        });
-        $('section.reo').css('margin-top', 0)
-      });
-
-      $('section.attention-model').on('affix-bottom.bs.affix', function () {
-        $('section.attention-model').css({
-          // 'position': 'relative',
-          // 'bottom': $('section.technology').position().top
-        });
-      });
-
-      $("ul.nav li a[href^='#']").on('click', function(e) {
-         e.preventDefault();
-         var hash = this.hash;
-         $('html, body').animate({
-           scrollTop: $(hash).offset().top
-         }, 300, function(){
-           window.location.hash = hash;
-         });
-      });
-
-      $('nav.sidebar div.close').click(function() {
-        $('nav.sidebar').toggleClass('collapze');
-      });
+      })
     </script>
   </body>
 </html>
