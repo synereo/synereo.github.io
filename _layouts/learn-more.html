@@ -269,7 +269,7 @@
         $clone.css({
           'position': 'fixed',
           'display': 'none',
-          'top': $('section.technology div.infographics').height() - $('section.technology').height() - $('nav.topbar').height() - 50,
+          'top': $('section.technology div.infographics').height() - $('section.technology').height() - $('nav.topbar').height() - 30,
           'z-index': 100
         });
 
@@ -288,7 +288,7 @@
             if (scrolltop + infographicsheight > techoffsettop) {
               var affixoffset = scrolltop + infographicsheight - techoffsettop;
               $infographicsfixed.css({
-                'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 50 - affixoffset
+                'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 30 - affixoffset
               })
             }
           }
