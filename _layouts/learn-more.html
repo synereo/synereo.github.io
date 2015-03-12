@@ -61,7 +61,11 @@
           </div>
         </div>
         <div class="infographics">
-          <img src="/img/infographics/basic.png">
+          <!-- <img class="basic" src="/img/infographics/basic.png"> -->
+          <img class="reo" src="/img/infographics/reo.png">
+          <img class="current" src="/img/infographics/current.png" style="display: none;">
+          <img class="stream" src="/img/infographics/stream.png" style="display: none;">
+          <img class="amp" src="/img/infographics/amp.png" style="display: none;">
         </div>
       </section>
 
@@ -113,7 +117,7 @@
           </div>
         </div>
         <div class="infographics">
-          <img src="/img/infographics/basic.png">
+          <img class="basic" src="/img/infographics/basic.png">
         </div>
       </section>
 
@@ -285,6 +289,23 @@
 
           if (scrolltop > infographicstop) {
             $infographicsfixed.show();
+
+            if (scrolltop + infographicsheight > $('section.current').offset().top) {
+              $('section.attention-model div.infographics img.reo').hide();
+              $('section.attention-model div.infographics img.current').show();
+
+              if (scrolltop + infographicsheight > $('h3#stream').offset().top) {
+                $('section.attention-model div.infographics img.current').hide();
+                $('section.attention-model div.infographics img.stream').show();
+
+                if (scrolltop + infographicsheight > $('section.amps').offset().top) {
+                  $('section.attention-model div.infographics img.stream').hide();
+                  $('section.attention-model div.infographics img.amp').show();
+                }
+              }
+            }
+
+
             if (scrolltop + infographicsheight > techoffsettop) {
               var affixoffset = scrolltop + infographicsheight - techoffsettop;
               $infographicsfixed.css({
