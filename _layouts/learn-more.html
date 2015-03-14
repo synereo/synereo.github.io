@@ -17,7 +17,8 @@
   </head>
   <body data-spy="scroll" data-target=".sidebar" data-offset="200">
 
-    <nav class="sidebar">
+    <!-- <nav class="sidebar">
+      <div class="close">X</div>
       <ul class="nav" role="tablist">
         <li class="attention-economy attention-economy-h"><a href="#attention-economy">Attention Economy Model</a></li>
         <li class="attention-economy"><a href="#reo">Reo</a></li>
@@ -32,7 +33,7 @@
         <li class="technology"><a href="#censorship-resilience">Censorship Resilience</a></li>
         <li class="technology"><a href="#gateways">Gateways</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <nav class="topbar">
       <div class="container-fluid">
@@ -58,6 +59,13 @@
               <p>Synereo is designed as a framework for managing the economy of attention. We create a "social brain" that optimizes your experience on the network, social or otherwise, by shaping the stream of information in ways that reflect what you and your social circle consider to be interesting and valuable. </p>
             </div>
           </div>
+        </div>
+        <div class="infographics">
+          <!-- <img class="basic" src="/img/infographics/basic.png"> -->
+          <img class="reo" src="/img/infographics/reo.png">
+          <img class="current" src="/img/infographics/current.png" style="display: none;">
+          <img class="stream" src="/img/infographics/stream.png" style="display: none;">
+          <img class="amp" src="/img/infographics/amp.png" style="display: none;">
         </div>
       </section>
 
@@ -107,6 +115,9 @@
               <p>Synereo's technology has been in development for four and a half years and represents the cutting edge of the peer to peer stack. With it, users are assured complete privacy, total identity ownership and data control, and even anonymity - if they seek it. The network has no single point of failure and is incredibly resilient to take-down attempts, as it allows any two or more peers to communicate directly.</p>
             </div>
           </div>
+        </div>
+        <div class="infographics">
+          <img class="basic" src="/img/infographics/basic.png">
         </div>
       </section>
 
@@ -217,24 +228,121 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script>
-      $('nav.sidebar').affix({
-        offset: {
-          top: 60,
-          bottom: function () {
-            return (this.bottom = $('footer').outerHeight(true) + $('section.solution').outerHeight(true))
+      $(document).ready(function() {
+        $('nav.sidebar').affix({
+          offset: {
+            top: 60,
+            bottom: function () {
+              return (this.bottom = $('footer').outerHeight(true) + $('section.solution').outerHeight(true))
+            }
           }
-        }
-      });
+        });
 
-      $("ul.nav li a[href^='#']").on('click', function(e) {
-         e.preventDefault();
-         var hash = this.hash;
-         $('html, body').animate({
-           scrollTop: $(hash).offset().top
-         }, 300, function(){
-           window.location.hash = hash;
-         });
-      });
+        $("ul.nav li a[href^='#']").on('click', function(e) {
+           e.preventDefault();
+           var hash = this.hash;
+           $('html, body').animate({
+             scrollTop: $(hash).offset().top
+           }, 300, function(){
+             window.location.hash = hash;
+           });
+        });
+
+        $('nav.sidebar div.close').click(function() {
+          $('nav.sidebar').toggleClass('collapze');
+        });
+
+        //////// infographics affix stuff
+        $window = $(window);
+
+        // attention model infographics
+        $clone = $('section.attention-model').clone();
+        $clone.addClass('attention-model-fixed');
+        $clone.insertAfter($('section.attention-model'));
+        $clone.css({
+          'position': 'fixed',
+          'display': 'none',
+          'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 50,
+          'z-index': 100
+        });
+
+        // technology infographics
+        $clone = $('section.technology').clone();
+        $clone.addClass('technology-fixed');
+        $clone.insertAfter($('section.technology'));
+        $clone.css({
+          'position': 'fixed',
+          'display': 'none',
+          'top': $('section.technology div.infographics').height() - $('section.technology').height() - $('nav.topbar').height() - 30,
+          'z-index': 100
+        });
+
+        // event callback
+        function update_infographics() {
+          var scrolltop = $window.scrollTop();
+
+          // attention model positioning
+          var infographicstop = $('section.attention-model div.infographics').position().top;
+          var infographicsheight = $('section.attention-model div.infographics').height();
+          var techoffsettop = $('section.technology').offset().top;
+          var $infographicsfixed = $('section.attention-model-fixed');
+
+          if (scrolltop > infographicstop) {
+            $infographicsfixed.show();
+
+            // if (scrolltop + infographicsheight > $('section.current').offset().top) {
+            //   $('section.attention-model div.infographics img.reo').hide();
+            //   $('section.attention-model div.infographics img.current').show();
+
+            //   if (scrolltop + infographicsheight > $('h3#stream').offset().top) {
+            //     $('section.attention-model div.infographics img.current').hide();
+            //     $('section.attention-model div.infographics img.stream').show();
+
+            //     if (scrolltop + infographicsheight > $('section.amps').offset().top) {
+            //       $('section.attention-model div.infographics img.stream').hide();
+            //       $('section.attention-model div.infographics img.amp').show();
+            //     }
+            //   }
+            // }
+
+
+            if (scrolltop + infographicsheight > techoffsettop) {
+              var affixoffset = scrolltop + infographicsheight - techoffsettop;
+              $infographicsfixed.css({
+                'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - $('nav.topbar').height() - 30 - affixoffset
+              })
+            }
+          }
+
+          if (scrolltop < infographicstop) {
+            $infographicsfixed.hide();
+          }
+
+          // technology positioning
+          var infographicstop = $('section.technology div.infographics').position().top;
+          var infographicsheight = $('section.technology div.infographics').height();
+          var footeroffsettop = $('section.solution').offset().top;
+          var $infographicsfixed = $('section.technology-fixed');
+
+          if (scrolltop > infographicstop) {
+            $infographicsfixed.show();
+            if (scrolltop + infographicsheight > footeroffsettop) {
+              var affixoffset = scrolltop + infographicsheight - footeroffsettop;
+              $infographicsfixed.css({
+                'top': $('section.technology div.infographics').height() - $('section.technology').height() - $('nav.topbar').height() - 50 - affixoffset
+              })
+            }
+          }
+
+          if (scrolltop < infographicstop) {
+            $infographicsfixed.hide();
+          }
+
+        }
+
+        $window.bind('scroll', update_infographics).resize(update_infographics);
+
+      })
     </script>
   </body>
 </html>
