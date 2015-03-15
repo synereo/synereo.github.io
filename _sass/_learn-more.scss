@@ -80,8 +80,35 @@ body {
         padding-top: 45px;
         padding-bottom: 90px;
         font-size: 1.2em;
-        p.extra-margin {
+        div.extra-margin {
             margin-bottom: 110px;
+        }
+        a.link {
+            float: right;
+            font-size: 0.7em;
+            color: #fff;
+            text-align: center;
+            &.whitepaper:before {
+                content: "";
+                background: url(/img/icons/whitepaper.png) no-repeat;
+                display: block;
+                width: 21px;
+                height: 22px;
+                margin: 0 auto;
+            }
+            &.blog:before {
+                content: "";
+                background: url(/img/icons/blog.png) no-repeat;
+                display: block;
+                width: 26px;
+                height: 24px;
+                margin: 0 auto;
+            }
+            &:after {
+                display: table;
+                content: "";
+                clear: both;
+            }
         }
     }
 
