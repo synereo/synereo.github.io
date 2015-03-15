@@ -1,34 +1,4 @@
 body {
-    font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-    nav.topbar {
-        background-color: #000;
-        padding-left: 15px;
-        padding-right: 20px;
-        span {
-            float: left;
-            img {
-                padding: 9px 0px 5px 6px;
-                height: 60px;
-            }
-        }
-        ul {
-            float: right;
-            padding-top: 17px;
-            li {
-                padding-left: 19px;
-                a {
-                    text-transform: uppercase;
-                    color: #fff;
-                }
-                a:hover {
-                    color: $synereo-blue;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
     section.main-graphic {
         background: url(/img/uploads/Synereo1.jpg) no-repeat;
         background-size: cover;
