@@ -117,7 +117,8 @@ body {
     section {
         color: #fff;
         padding-top: 45px;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
+        font-size: 1.2em;
         p.extra-margin {
             margin-bottom: 110px;
         }
@@ -175,7 +176,12 @@ body {
     section.amps {
         background-color: $synereo-blue;
         h2 { color: #fff; }
-        p { color: #000; }
+        p {
+            color: #000;
+            em {
+                color: $synereo-dark-gray-bg;
+            }
+        }
     }
 
     section.technology {
@@ -208,7 +214,12 @@ body {
     section.smart-contracts {
         background-color: $synereo-orange-bg;
         h2 { color: #fff; }
-        p { color: #000; }
+        p {
+            color: #000;
+            em {
+                color: $synereo-dark-gray-bg;
+            }
+        }
     }
 
     section.censorship-resilience {
