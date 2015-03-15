@@ -141,6 +141,8 @@ body {
         background-size: cover;
         padding-top: 110px;
         padding-bottom: 0px;
+        border-bottom: 2px solid $synereo-blue;
+
         h2 { color: $synereo-blue; }
         p {
             color: #fff;
@@ -182,6 +184,8 @@ body {
         background-size: cover;
         padding-top: 90px;
         padding-bottom: 0px;
+        border-bottom: 2px solid $synereo-orange;
+
         h2 { color: $synereo-orange; }
         p {
             color: #fff;
