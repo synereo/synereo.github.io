@@ -210,6 +210,7 @@ body {
             padding-bottom: 13px;
             label {
                 text-transform: uppercase;
+                color: #fff;
             }
             input {
                 display: block;
@@ -218,6 +219,7 @@ body {
                 transition: background 0.2s linear 0s;
                 border: 0px;
                 padding: 7px;
+                color: #fff;
             }
             input:focus {
                 background: rgba(0, 0, 0, 0.8);
