@@ -10,5 +10,6 @@ $synereo-light-gray-bg: #606163;
 $synereo-dark-gray-bg: #484949;
 
 @import
+  "_base.scss",
 	"_home.scss"
 ;

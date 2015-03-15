@@ -1,44 +1,5 @@
-@font-face {
-    font-family: 'Myriad';
-    src: url('/fonts/myriad.eot');
-    src: url('/fonts/myriad.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/myriad.woff') format('woff'),
-         url('/fonts/myriad.ttf') format('truetype'),
-         url('/fonts/myriad.svg#Myriad') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: "Myriad","Helvetica Neue",Helvetica,Arial,sans-serif;
     position: relative;
-
-    nav.topbar {
-        background-color: #000;
-        padding-left: 15px;
-        padding-right: 20px;
-        span {
-            img {
-                padding: 9px 0px 5px 6px;
-                height: 60px;
-            }
-        }
-        ul {
-            float: right;
-            padding-top: 17px;
-            li {
-                padding-left: 19px;
-                a {
-                    text-transform: uppercase;
-                    color: #fff;
-                }
-                a:hover {
-                    color: $synereo-blue;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
 
     nav.affix-top {
         position: absolute;
@@ -224,70 +185,5 @@ body {
 
     section.censorship-resilience {
         background-color: $synereo-dark-gray-bg;
-    }
-
-    section.solution {
-        background-color: #000;
-        background: url(/img/bg/net.jpg) no-repeat;
-        background-size: cover;
-        padding-top: 20px;
-
-        .title {
-            text-align: center;
-            h2, h4 { color: $synereo-blue; }
-        }
-
-        p {
-            color: #fff;
-            font-size: 1.15em;
-        }
-
-        .cube-row {
-            padding-top: 40px;
-        }
-
-        .footer-cube {
-            padding: 1px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            h3 {
-                color: #fff;
-            }
-        }
-
-        form.subscribe {
-            padding-bottom: 13px;
-            label {
-                text-transform: uppercase;
-            }
-            input {
-                display: block;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                transition: background 0.2s linear 0s;
-                border: 0px;
-                padding: 7px;
-            }
-            input:focus {
-                background: rgba(0, 0, 0, 0.8);
-            }
-            button {
-                border-radius: 2px;
-                line-height: 1;
-                padding: 6px 8px;
-                background: $synereo-blue;
-                color: #fff;
-                border: 0px;
-            }
-            button:hover {
-                background: darken($synereo-blue, 15%);
-            }
-        }
-    }
-
-    footer {
-        background-color: #121212;
-        text-align: center;
-        padding-top: 20px;
-        height: 90px;
     }
 }

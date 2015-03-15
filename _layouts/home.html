@@ -20,20 +20,7 @@
     <![endif]-->
   </head>
   <body>
-
-    <nav class="topbar">
-      <div class="container-fluid">
-        <div class="row">
-          <span class="logo"><img src="/img/synereo/logo_transparent80.png"></span>
-          <ul class="list-inline">
-            <li><a href="/">Home</a></li>
-            <li><a href="http://blog.synereo.com">Blog</a></li>
-            <li><a href="https://discuss.synereo.com">Discuss</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include header.html %}
 
     <section class="main-graphic"></section>
 
@@ -161,42 +148,7 @@
       </div>
     </section>
 
-    <section class="solution" data-parallax="scroll" data-image-src="/img/bg/net.jpg" data-bleed="50">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="title">
-            <h2>Be part of the solution</h2>
-          </div>
-        </div>
-        <div class="row cube-row">
-          <div class="col-md-5 col-md-offset-1">
-            <div class="footer-cube">
-              <h3 id="contact">Contact Us</h3>
-              <p>Drop us a line at <a href="mailto:hello@synereo.com">hello@synereo.com</a>.</p>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="footer-cube">
-              <h3>Sign up for updates</h3>
-              {% include mc_form.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="solution">
-      <div class="container-fluid">
-        <div class="row">
-          <ul class="list-inline">
-            <li><a href="https://github.com/synereo/"><img src="/img/social/github_g.png"></a></li>
-            <li><a href="http://www.reddit.com/r/synereo"><img src="/img/social/reddit_g.png"></a></li>
-            <li><a href="http://twitter.com/synereo"><img src="/img/social/twitter_g.png"></a></li>
-            <li><a href="http://facebook.com/synereo"><img src="/img/social/facebook_g.png"></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    {% include footer.html %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
