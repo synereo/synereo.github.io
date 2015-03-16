@@ -64,6 +64,12 @@ body {
         }
     }
 
+    @media all and (max-width: 800px) {
+        div.infographics {
+            display: none;
+        }
+    }
+
     nav.sidebar.collapze {
         width: 0px;
         ul {
