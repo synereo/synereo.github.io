@@ -95,29 +95,36 @@ body {
             color: #fff;
             text-align: center;
             margin-left: 17px;
-            &.whitepaper:before {
-                content: "";
-                background: url(/img/icons/whitepaper.png) no-repeat;
-                display: block;
+            &.whitepaper svg {
                 width: 21px;
                 height: 29px;
-                margin: 0 auto;
-            }
-            &.blog:before {
-                content: "";
-                background: url(/img/icons/blog.png) no-repeat;
                 display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #ffff00;
+                    fill: #ffff00;
+                }
+            }
+            &.blog svg {
                 width: 26px;
                 height: 29px;
-                margin: 0 auto;
-            }
-            &.slides:before {
-                content: "";
-                background: url(/img/icons/slides.png) no-repeat;
                 display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #ffff00;
+                }
+            }
+            &.slides svg {
                 width: 25px;
                 height: 29px;
+                display: block;
                 margin: 0 auto;
+                * {
+                    stroke: #ffff00;
+                }
+                polygon, .st1 {
+                    fill: #ffff00;
+                }
             }
             &:after {
                 display: table;
