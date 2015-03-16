@@ -4,7 +4,7 @@ body {
         background-size: cover;
         background-position: center;
         padding-top: 50.36%;
-        min-height: 350px;
+        min-height: 300px;
     }
 
     section.your-network {
@@ -54,7 +54,16 @@ body {
         background-color: rgb(34, 34, 34);
         padding: 30px 20px 40px 10px;
         div.graphic {
+            background: url(/img/icons/info-circle.jpg) no-repeat;
+            background-position: center;
+            background-size: cover 50%;
             text-align: center;
+            padding-top: 85.15%;
+        }
+        @media all and (max-width: 800px) {
+            div.graphic {
+                display: none;
+            }
         }
         div.bullet {
             clear: both;
