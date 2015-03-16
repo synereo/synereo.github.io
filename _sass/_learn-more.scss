@@ -100,18 +100,14 @@ body {
                 height: 29px;
                 display: block;
                 margin: 0 auto;
-                * {
-                    stroke: #ffff00;
-                    fill: #ffff00;
-                }
             }
             &.blog svg {
                 width: 26px;
                 height: 29px;
                 display: block;
                 margin: 0 auto;
-                * {
-                    stroke: #ffff00;
+                .st1 {
+                    fill: transparent;
                 }
             }
             &.slides svg {
@@ -119,11 +115,73 @@ body {
                 height: 29px;
                 display: block;
                 margin: 0 auto;
+            }
+            &.whitepaper-orange svg {
+                width: 21px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
                 * {
-                    stroke: #ffff00;
+                    stroke: #ff9000;
+                    fill: #ff9000;
+                }
+            }
+            &.blog-orange svg {
+                width: 26px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #ff9000;
+                }
+                .st1 {
+                    fill: transparent;
+                }
+            }
+            &.slides-orange svg {
+                width: 25px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #ff9000;
                 }
                 polygon, .st1 {
-                    fill: #ffff00;
+                    fill: #ff9000;
+                }
+            }
+            &.whitepaper-white svg {
+                width: 21px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #fff;
+                    fill: #fff;
+                }
+            }
+            &.blog-white svg {
+                width: 26px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #fff;
+                }
+                .st1 {
+                    fill: transparent;
+                }
+            }
+            &.slides-white svg {
+                width: 25px;
+                height: 29px;
+                display: block;
+                margin: 0 auto;
+                * {
+                    stroke: #fff;
+                }
+                polygon, .st1 {
+                    fill: #fff;
                 }
             }
             &:after {
