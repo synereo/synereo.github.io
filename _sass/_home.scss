@@ -1,9 +1,30 @@
 body {
     section.main-graphic {
-        background: url(/img/uploads/Synereo1.jpg) no-repeat;
+        background: url(/img/bg/crowdsale.jpg) no-repeat;
         background-size: cover;
         background-position: center;
-        min-height: 650px;
+        padding-top: 50.36%;
+        min-height: 350px;
+        div.links {
+            margin-top: -8%;
+            text-align: center;
+            .cta {
+                padding: 11px 13px 8px 13px;
+                margin: 7px;
+                font-size: 1.3em;
+                border-width: 1px;
+                border-style: solid;
+                text-transform: uppercase;
+            }
+            .cta-blue {
+                color: $synereo-blue;
+                border-color: $synereo-blue;
+            }
+            .cta-orange {
+                color: $synereo-orange;
+                border-color: $synereo-orange;
+            }
+        }
     }
 
     section.your-network {
