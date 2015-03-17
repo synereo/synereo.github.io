@@ -290,21 +290,21 @@
 
             $('section.technology div.infographics img').hide();
 
-            if (scrolltop + infographicsheight - 0 > $('section.specialk').offset().top) {
-              if (scrolltop + infographicsheight - 0 > $('h3#extensibility').offset().top) {
-                if (scrolltop + infographicsheight - 0 > $('section.smart-contracts').offset().top) {
-                  $('section.attention-model div.infographics img.smart').show();
+            if (scrolltop + infographicsheight - 250 > $('section.specialk').offset().top) {
+              if (scrolltop + infographicsheight - 250 > $('h3#extensibility').offset().top) {
+                if (scrolltop + infographicsheight - 250 > $('section.smart-contracts').offset().top) {
+                  $('section.technology div.infographics img.smart').show();
                 }
                 else {
-                  $('section.attention-model div.infographics img.extensibility').show();
+                  $('section.technology div.infographics img.extensibility').show();
                 }
               }
               else {
-                $('section.attention-model div.infographics img.specialk').show();
+                $('section.technology div.infographics img.specialk').show();
               }
             }
             else {
-              $('section.attention-model div.infographics img.dendronet').show();
+              $('section.technology div.infographics img.dendronet').show();
             }
 
             if (scrolltop + infographicsheight > footeroffsettop) {
