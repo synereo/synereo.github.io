@@ -111,7 +111,10 @@
           </div>
         </div>
         <div class="infographics">
-          <img class="basic" src="/img/infographics/basic_tech.png">
+          <img class="dendronet" src="/img/infographics/dendronet.png">
+          <img class="specialk" src="/img/infographics/special-k.png" style="display: none;">
+          <img class="extensibility" src="/img/infographics/extensibility.png" style="display: none;">
+          <img class="smart" src="/img/infographics/smart.png" style="display: none;">
         </div>
       </section>
 
@@ -284,10 +287,30 @@
 
           if (scrolltop > infographicstop) {
             $infographicsfixed.show();
+
+            $('section.technology div.infographics img').hide();
+
+            if (scrolltop + infographicsheight - 0 > $('section.specialk').offset().top) {
+              if (scrolltop + infographicsheight - 0 > $('h3#extensibility').offset().top) {
+                if (scrolltop + infographicsheight - 0 > $('section.smart-contracts').offset().top) {
+                  $('section.attention-model div.infographics img.smart').show();
+                }
+                else {
+                  $('section.attention-model div.infographics img.extensibility').show();
+                }
+              }
+              else {
+                $('section.attention-model div.infographics img.specialk').show();
+              }
+            }
+            else {
+              $('section.attention-model div.infographics img.dendronet').show();
+            }
+
             if (scrolltop + infographicsheight > footeroffsettop) {
               var affixoffset = scrolltop + infographicsheight - footeroffsettop;
               $infographicsfixed.css({
-                'top': $('section.technology div.infographics').height() - $('section.technology').height() - 50 - affixoffset
+                'top': $('section.technology div.infographics').height() - $('section.solution').height() - 50 - affixoffset
               })
             }
           }
