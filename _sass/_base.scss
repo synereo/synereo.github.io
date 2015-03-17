@@ -14,9 +14,12 @@ body {
     height: 100%;
 
     nav.topbar {
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.9);
         padding-left: 15px;
         padding-right: 20px;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
         span {
             float: left;
             img {
