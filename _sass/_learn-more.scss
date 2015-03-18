@@ -95,94 +95,23 @@ body {
             color: #fff;
             text-align: center;
             margin-left: 17px;
-            &.whitepaper svg {
+            &.whitepaper img {
                 width: 21px;
-                height: 29px;
+                height: 22px;
                 display: block;
-                margin: 0 auto;
+                margin: 0 auto 7px auto;
             }
-            &.blog svg {
+            &.blog img {
                 width: 26px;
-                height: 29px;
+                height: 24px;
                 display: block;
-                margin: 0 auto;
-                .st1 {
-                    fill: transparent;
-                }
+                margin: 0 auto 5px auto;
             }
-            &.slides svg {
+            &.slides img {
                 width: 25px;
-                height: 29px;
+                height: 22px;
                 display: block;
-                margin: 0 auto;
-            }
-            &.whitepaper-orange svg {
-                width: 21px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #ff9000;
-                    fill: #ff9000;
-                }
-            }
-            &.blog-orange svg {
-                width: 26px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #ff9000;
-                }
-                .st1 {
-                    fill: transparent;
-                }
-            }
-            &.slides-orange svg {
-                width: 25px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #ff9000;
-                }
-                polygon, .st1 {
-                    fill: #ff9000;
-                }
-            }
-            &.whitepaper-white svg {
-                width: 21px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #fff;
-                    fill: #fff;
-                }
-            }
-            &.blog-white svg {
-                width: 26px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #fff;
-                }
-                .st1 {
-                    fill: transparent;
-                }
-            }
-            &.slides-white svg {
-                width: 25px;
-                height: 29px;
-                display: block;
-                margin: 0 auto;
-                * {
-                    stroke: #fff;
-                }
-                polygon, .st1 {
-                    fill: #fff;
-                }
+                margin: 0 auto 7px auto;
             }
             &:after {
                 display: table;
