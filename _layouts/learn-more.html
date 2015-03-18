@@ -48,14 +48,27 @@
         </div>
         <div class="infographics">
           <!-- <img class="basic" src="/img/infographics/basic.png"> -->
-          <img class="reo" src="/img/infographics/reo.png">
-          <img class="current" src="/img/infographics/current.png" style="display: none;">
+          <img class="current" src="/img/infographics/current.png">
+          <img class="reo" src="/img/infographics/reo.png" style="display: none;">
           <img class="stream" src="/img/infographics/stream.png" style="display: none;">
           <img class="amp" src="/img/infographics/amp.png" style="display: none;">
         </div>
       </section>
 
-      <section id="reo" class="reo light-gray-gradient">
+      <section id="current" class="current light-gray-gradient">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h3>Current</h3>
+              <div class="extra-margin"><p><em>Current is a measure of the power of messages flowing through the Synereo network.</em> The stronger the Current, the more priority a message or post will receive in a user's stream. People recharge and even supercharge a message's Current when attending it, making it more likely to be seen by others after them. Current is primarily determined by the interacting users' Reo, and is also modulated by many other factors in Synereo's Attention Model.</p>
+              <a class="link whitepaper" href="http://www.synereo.com/whitepapers/synereo.pdf#subsection.2.2.3"><img src="/img/icons/whitepaper_blue.png">Whitepaper</a>
+              <a class="link slides" href="https://docs.google.com/presentation/d/1MQ57q-ZraCBvx-pPFA-J-MpKN6v8AkUXtCaM79vU3L8/present?slide=id.g8de73098a_20"><img src="/img/icons/slides_blue.png">Slides</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reo" class="reo dark-gray-gradient">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -63,20 +76,6 @@
               <p><em>Reo is a measure of your reputation as a publisher of attention-worthy content.</em> It is a tool for shaping the information flow around a social consensus. Reo is calculated from the point of view of each user as they receive information from another, changing based on the slice of the network they share with the user trying for their attention. This means that a person who has the attention of the peers in your community will have an easier time reaching you as well.</p>
               <a class="link whitepaper" href="http://www.synereo.com/whitepapers/synereo.pdf#subsection.2.2.2"><img src="/img/icons/whitepaper_blue.png">Whitepaper</a>
               <a class="link slides" href="https://docs.google.com/presentation/d/12wZfRyF9XBMrc1ripXGfyNXCnO_MD7f2-Gc8AIa-v8o/pub?start=false&loop=false&slide=id.g4ecec4c43_30"><img src="/img/icons/slides_blue.png">Slides</a>
-            </div>
-            </div>
-        </div>
-      </section>
-
-      <section id="current" class="current dark-gray-gradient">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <h3>Current</h3>
-              <div class="extra-margin"><p><em>Current is a measure of the power of messages flowing through the Synereo network.</em> The stronger the Current, the more priority a message or post will receive in a user's stream. People recharge and even supercharge a message's Current when attending it, making it more likely to be seen by others after them. Current is primarily determined by the interacting users' Reo, and is also modulated by many other factors in Synereo's Attention Model.</p>
-              <a class="link whitepaper" href="http://www.synereo.com/whitepapers/synereo.pdf#subsection.2.2.3"><img src="/img/icons/whitepaper_blue.png">Whitepaper</a>
-
-              <a class="link slides" href="https://docs.google.com/presentation/d/1MQ57q-ZraCBvx-pPFA-J-MpKN6v8AkUXtCaM79vU3L8/present?slide=id.g8de73098a_20"><img src="/img/icons/slides_blue.png">Slides</a></div>
 
               <h3 id="stream">Stream</h3>
               <p><em>Messages and posts broadcast to you with different Currents essentially bid for your attention, becoming prioritized just for you in the process.</em> The Stream that is created is the basic information organizing mechanism in Synereo. Configuring the Stream is easy, affecting specific types of Current reaching you from different contacts, apps, and areas on the network. Feel like increasing the chances of seeing musical content? Just turn up the dial, and posts from Bandcamp receive a higher priority.</p>
@@ -249,7 +248,7 @@
             $infographicsfixed.show();
             $('section.attention-model div.infographics img').hide();
 
-            if (scrolltop + infographicsheight - 250 > $('section.current').offset().top) {
+            if (scrolltop + infographicsheight - 250 > $('section.reo').offset().top) {
               if (scrolltop + infographicsheight - 250 > $('h3#stream').offset().top) {
                 if (scrolltop + infographicsheight - 250 > $('section.amps').offset().top) {
                   $('section.attention-model div.infographics img.amp').show();
@@ -259,11 +258,11 @@
                 }
               }
               else {
-                $('section.attention-model div.infographics img.current').show();
+                $('section.attention-model div.infographics img.reo').show();
               }
             }
             else {
-              $('section.attention-model div.infographics img.reo').show();
+              $('section.attention-model div.infographics img.current').show();
             }
 
 
