@@ -1,13 +1,62 @@
 body {
     section.main-graphic {
-        background: url(/img/bg/crowdsale.jpg) no-repeat;
+        background: url(/img/bg/main_empty.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         padding-top: 50.36%;
         min-height: 350px;
+        div.images {
+            margin-top: -47%;
+            text-align: center;
+            img {
+                &.logo {
+                    width: 22%;
+                    display: block;
+                }
+                &.crowdsale {
+                    width: 50%;
+                    padding-bottom: 2%;
+                    display: block;
+                }
+                &.amp {
+                    width: 7%;
+                }
+                &.subtitle {
+                    width: 40%;
+                    margin-top: -4%;
+                }
+                margin: 0 auto;
+            }
+            div.countdown {
+                img.amp {
+                    margin-bottom: 4%;
+                    width: 8%;
+                }
+                span.circle {
+                    border: 1px solid #aaa;
+                    border-radius: 50%;
+                    display: inline-block;
+                    width: 8%;
+                    height: 0;
+                    padding-bottom: 8%;
+                    margin: 0px 6px;
+                    color: #aaa;
+                    span.value {
+                        font-size: 350%;
+                        display: inline-block;
+                        line-height: 77%;
+                        padding-top: 25%;
+                    }
+                    span.title {
+                        display: block;
+                    }
+                }
+            }
+        }
         div.links {
             margin-top: -8%;
             text-align: center;
+            display: none;
             @media all and (max-width: 750px) {
                 display: none;
             }
