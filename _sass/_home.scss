@@ -25,6 +25,11 @@ body {
                 border-color: $synereo-orange;
             }
         }
+        @media all and (max-width: 750px) {
+            div.links {
+                display: none;
+            }
+        }
     }
 
     section.your-network {
