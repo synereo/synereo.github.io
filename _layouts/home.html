@@ -57,8 +57,16 @@
         <div class="images">
           <img class="logo" src="/img/synereo/logo_main.png">
           <img class="crowdsale" src="/img/synereo/crowdsale.png">
+          <div class="countdown">
+            <span class="circle"><span class="value days">00</span><span class="title">Days</span></span>
+            <span class="circle"><span class="value hours">00</span><span class="title">Hours</span></span>
+            <img class="amp" src="/img/synereo/amp.png">
+            <span class="circle"><span class="value minutes">00</span><span class="title">Minutes</span></span>
+            <span class="circle"><span class="value seconds">00</span><span class="title">Seconds</span></span>
+          </div>
         </div>
         <div class="links">
+          <a href="#contact" class="cta cta-blue">Sign up for updates</a>
           <a href="https://crowdsale.synereo.com" class="cta cta-orange">Purchase AMPs</a>
           <img class="subtitle" src="/img/synereo/subtitle.png">
         </div>
@@ -205,7 +213,7 @@
       );
 
       update_crowdsale_countdown = function() {
-        var target_date = Date.UTC(2015, 02, 23, 20);
+        var target_date = Date.UTC(2015, 03, 22, 20);
         var remaining = target_date - Date.now();
         var days = remaining / 1000 / 60 / 60 / 24;
         $('div.countdown span.days').text(Math.floor(days));
