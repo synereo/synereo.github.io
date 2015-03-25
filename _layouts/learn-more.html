@@ -20,8 +20,8 @@
       <!-- <div class="close">X</div> -->
       <ul class="nav" role="tablist">
         <li class="attention-economy attention-economy-h"><a href="#attention-economy">Attention Economy Model</a></li>
-        <li class="attention-economy"><a href="#reo">Reo</a></li>
         <li class="attention-economy"><a href="#current">Current</a></li>
+        <li class="attention-economy"><a href="#reo">Reo</a></li>
         <li class="attention-economy"><a href="#stream">Stream</a></li>
         <li class="attention-economy"><a href="#amps">AMPs</a></li>
         <li class="technology technology-h"><a href="#technology">Distributed Technology Stack</a></li>
@@ -47,11 +47,7 @@
           </div>
         </div>
         <div class="infographics">
-          <!-- <img class="basic" src="/img/infographics/basic.png"> -->
-          <img class="current" src="/img/infographics/current.png">
-          <img class="reo" src="/img/infographics/reo.png" style="display: none;">
-          <img class="stream" src="/img/infographics/stream.png" style="display: none;">
-          <img class="amp" src="/img/infographics/amp.png" style="display: none;">
+          <img class="basic" src="/img/infographics/basic.png">
         </div>
       </section>
 
@@ -60,9 +56,9 @@
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
               <h3>Current</h3>
-              <div class="extra-margin"><p><em>Current is a measure of the power of messages flowing through the Synereo network.</em> The stronger the Current, the more priority a message or post will receive in a user's stream. People recharge and even supercharge a message's Current when attending it, making it more likely to be seen by others after them. Current is primarily determined by the interacting users' Reo, and is also modulated by many other factors in Synereo's Attention Model.</p>
+              <p><em>Current is a measure of the power of messages flowing through the Synereo network.</em> The stronger the Current, the more priority a message or post will receive in a user's stream. People recharge and even supercharge a message's Current when attending it, making it more likely to be seen by others after them. Current is primarily determined by the interacting users' Reo, and is also modulated by many other factors in Synereo's Attention Model.</p>
               <a class="link whitepaper" href="http://www.synereo.com/whitepapers/synereo.pdf#subsection.2.2.3"><img src="/img/icons/whitepaper_blue.png">Whitepaper</a>
-              <a class="link slides" href="https://docs.google.com/presentation/d/1MQ57q-ZraCBvx-pPFA-J-MpKN6v8AkUXtCaM79vU3L8/present?slide=id.g8de73098a_20"><img src="/img/icons/slides_blue.png">Slides</a></div>
+              <a class="link slides" href="https://docs.google.com/presentation/d/1MQ57q-ZraCBvx-pPFA-J-MpKN6v8AkUXtCaM79vU3L8/present?slide=id.g8de73098a_20"><img src="/img/icons/slides_blue.png">Slides</a>
             </div>
           </div>
         </div>
@@ -73,9 +69,9 @@
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
               <h3>Reo</h3>
-              <p><em>Reo is a measure of your reputation as a publisher of attention-worthy content.</em> It is a tool for shaping the information flow around a social consensus. Reo is calculated from the point of view of each user as they receive information from another, changing based on the slice of the network they share with the user trying for their attention. This means that a person who has the attention of the peers in your community will have an easier time reaching you as well.</p>
+              <div class="extra-margin"><p><em>Reo is a measure of your reputation as a publisher of attention-worthy content.</em> It is a tool for shaping the information flow around a social consensus. Reo is calculated from the point of view of each user as they receive information from another, changing based on the slice of the network they share with the user trying for their attention. This means that a person who has the attention of the peers in your community will have an easier time reaching you as well.</p>
               <a class="link whitepaper" href="http://www.synereo.com/whitepapers/synereo.pdf#subsection.2.2.2"><img src="/img/icons/whitepaper_blue.png">Whitepaper</a>
-              <a class="link slides" href="https://docs.google.com/presentation/d/12wZfRyF9XBMrc1ripXGfyNXCnO_MD7f2-Gc8AIa-v8o/pub?start=false&loop=false&slide=id.g4ecec4c43_30"><img src="/img/icons/slides_blue.png">Slides</a>
+              <a class="link slides" href="https://docs.google.com/presentation/d/12wZfRyF9XBMrc1ripXGfyNXCnO_MD7f2-Gc8AIa-v8o/pub?start=false&loop=false&slide=id.g4ecec4c43_30"><img src="/img/icons/slides_blue.png">Slides</a></div>
 
               <h3 id="stream">Stream</h3>
               <p><em>Messages and posts broadcast to you with different Currents essentially bid for your attention, becoming prioritized just for you in the process.</em> The Stream that is created is the basic information organizing mechanism in Synereo. Configuring the Stream is easy, affecting specific types of Current reaching you from different contacts, apps, and areas on the network. Feel like increasing the chances of seeing musical content? Just turn up the dial, and posts from Bandcamp receive a higher priority.</p>
@@ -110,10 +106,7 @@
           </div>
         </div>
         <div class="infographics">
-          <img class="dendronet" src="/img/infographics/dendronet.png">
-          <img class="specialk" src="/img/infographics/special-k.png" style="display: none;">
-          <img class="extensibility" src="/img/infographics/extensibility.png" style="display: none;">
-          <img class="smart" src="/img/infographics/smart.png" style="display: none;">
+          <img class="dendronet" src="/img/infographics/basic_tech.png">
         </div>
       </section>
 
@@ -208,119 +201,6 @@
         $('nav.sidebar div.close').click(function() {
           $('nav.sidebar').toggleClass('collapze');
         });
-
-        //////// infographics affix stuff
-        $window = $(window);
-
-        // attention model infographics
-        $clone = $('section.attention-model').clone();
-        $clone.addClass('attention-model-fixed');
-        $clone.insertAfter($('section.attention-model'));
-        $clone.css({
-          'position': 'fixed',
-          'display': 'none',
-          'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - 90,
-          'z-index': 100
-        });
-
-        // technology infographics
-        $clone = $('section.technology').clone();
-        $clone.addClass('technology-fixed');
-        $clone.insertAfter($('section.technology'));
-        $clone.css({
-          'position': 'fixed',
-          'display': 'none',
-          'top': $('section.technology div.infographics').height() - $('section.technology').height() - 40,
-          'z-index': 100
-        });
-
-        // event callback
-        function update_infographics() {
-          var scrolltop = $window.scrollTop();
-
-          // attention model positioning
-          var infographicstop = $('section.attention-model div.infographics').position().top;
-          var infographicsheight = $('section.attention-model div.infographics').height();
-          var techoffsettop = $('section.technology').offset().top;
-          var $infographicsfixed = $('section.attention-model-fixed');
-
-          if (scrolltop > infographicstop) {
-            $infographicsfixed.show();
-            $('section.attention-model div.infographics img').hide();
-
-            if (scrolltop + infographicsheight - 250 > $('section.reo').offset().top) {
-              if (scrolltop + infographicsheight - 250 > $('h3#stream').offset().top) {
-                if (scrolltop + infographicsheight - 250 > $('section.amps').offset().top) {
-                  $('section.attention-model div.infographics img.amp').show();
-                }
-                else {
-                  $('section.attention-model div.infographics img.stream').show();
-                }
-              }
-              else {
-                $('section.attention-model div.infographics img.reo').show();
-              }
-            }
-            else {
-              $('section.attention-model div.infographics img.current').show();
-            }
-
-
-            if (scrolltop + infographicsheight > techoffsettop) {
-              var affixoffset = scrolltop + infographicsheight - techoffsettop;
-              $infographicsfixed.css({
-                'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - affixoffset - 100
-              })
-            }
-          }
-
-          if (scrolltop < infographicstop) {
-            $infographicsfixed.hide();
-          }
-
-          // technology positioning
-          var infographicstop = $('section.technology div.infographics').position().top;
-          var infographicsheight = $('section.technology div.infographics').height();
-          var footeroffsettop = $('section.censorship-resilience').offset().top;
-          var $infographicsfixed = $('section.technology-fixed');
-
-          if (scrolltop > infographicstop) {
-            $infographicsfixed.show();
-
-            $('section.technology div.infographics img').hide();
-
-            if (scrolltop + infographicsheight - 250 > $('section.specialk').offset().top) {
-              if (scrolltop + infographicsheight - 250 > $('h3#extensibility').offset().top) {
-                if (scrolltop + infographicsheight - 250 > $('section.smart-contracts').offset().top) {
-                  $('section.technology div.infographics img.smart').show();
-                }
-                else {
-                  $('section.technology div.infographics img.extensibility').show();
-                }
-              }
-              else {
-                $('section.technology div.infographics img.specialk').show();
-              }
-            }
-            else {
-              $('section.technology div.infographics img.dendronet').show();
-            }
-
-            if (scrolltop + infographicsheight > footeroffsettop) {
-              var affixoffset = scrolltop + infographicsheight - footeroffsettop;
-              $infographicsfixed.css({
-                'top': $('section.technology div.infographics').height() - $('section.technology').height() - 50 - affixoffset
-              });
-            }
-          }
-
-          if (scrolltop < infographicstop) {
-            $infographicsfixed.hide();
-          }
-
-        }
-
-        $window.bind('scroll', update_infographics).resize(update_infographics);
 
       })
     </script>
