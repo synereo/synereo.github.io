@@ -185,7 +185,7 @@
     <script src="/js/ext/skrollr.min.js"></script>
     <script>
       $(document).ready(function() {
-        // var s = skrollr.init();
+        var s = skrollr.init();
         $('nav.sidebar').affix({
           offset: {
             top: 60,
@@ -208,120 +208,6 @@
         $('nav.sidebar div.close').click(function() {
           $('nav.sidebar').toggleClass('collapze');
         });
-
-        //////// infographics affix stuff
-        $window = $(window);
-
-        // attention model infographics
-        $clone = $('section.attention-model').clone();
-        $clone.addClass('attention-model-fixed');
-        $clone.insertAfter($('section.attention-model'));
-        $clone.css({
-          'position': 'fixed',
-          'display': 'none',
-          'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - 90,
-          'z-index': 100
-        });
-
-        // technology infographics
-        $clone = $('section.technology').clone();
-        $clone.addClass('technology-fixed');
-        $clone.insertAfter($('section.technology'));
-        $clone.css({
-          'position': 'fixed',
-          'display': 'none',
-          'top': $('section.technology div.infographics').height() - $('section.technology').height() - 40,
-          'z-index': 100
-        });
-
-        // event callback
-        function update_infographics() {
-          var scrolltop = $window.scrollTop();
-
-          // attention model positioning
-          var infographicstop = $('section.attention-model div.infographics').position().top;
-          var infographicsheight = $('section.attention-model div.infographics').height();
-          var techoffsettop = $('section.technology').offset().top;
-          var $infographicsfixed = $('section.attention-model-fixed');
-
-          if (scrolltop > infographicstop) {
-            $infographicsfixed.show();
-            $('section.attention-model div.infographics img').hide();
-
-            if (scrolltop + infographicsheight - 250 > $('section.reo').offset().top) {
-              if (scrolltop + infographicsheight - 250 > $('h3#stream').offset().top) {
-                if (scrolltop + infographicsheight - 250 > $('section.amps').offset().top) {
-                  $('section.attention-model div.infographics img.amp').show();
-                }
-                else {
-                  $('section.attention-model div.infographics img.stream').show();
-                }
-              }
-              else {
-                $('section.attention-model div.infographics img.reo').show();
-              }
-            }
-            else {
-              $('section.attention-model div.infographics img.current').show();
-            }
-
-
-            if (scrolltop + infographicsheight > techoffsettop) {
-              var affixoffset = scrolltop + infographicsheight - techoffsettop;
-              $infographicsfixed.css({
-                'top': $('section.attention-model div.infographics').height() - $('section.attention-model').height() - affixoffset - 100
-              })
-            }
-          }
-
-          if (scrolltop < infographicstop) {
-            $infographicsfixed.hide();
-          }
-
-          // technology positioning
-          var infographicstop = $('section.technology div.infographics').position().top;
-          var infographicsheight = $('section.technology div.infographics').height();
-          var footeroffsettop = $('section.censorship-resilience').offset().top;
-          var $infographicsfixed = $('section.technology-fixed');
-
-          if (scrolltop > infographicstop) {
-            $infographicsfixed.show();
-
-            $('section.technology div.infographics img').hide();
-
-            if (scrolltop + infographicsheight - 250 > $('section.specialk').offset().top) {
-              if (scrolltop + infographicsheight - 250 > $('h3#extensibility').offset().top) {
-                if (scrolltop + infographicsheight - 250 > $('section.smart-contracts').offset().top) {
-                  $('section.technology div.infographics img.smart').show();
-                }
-                else {
-                  $('section.technology div.infographics img.extensibility').show();
-                }
-              }
-              else {
-                $('section.technology div.infographics img.specialk').show();
-              }
-            }
-            else {
-              $('section.technology div.infographics img.dendronet').show();
-            }
-
-            if (scrolltop + infographicsheight > footeroffsettop) {
-              var affixoffset = scrolltop + infographicsheight - footeroffsettop;
-              $infographicsfixed.css({
-                'top': $('section.technology div.infographics').height() - $('section.technology').height() - 50 - affixoffset
-              });
-            }
-          }
-
-          if (scrolltop < infographicstop) {
-            $infographicsfixed.hide();
-          }
-
-        }
-
-        $window.bind('scroll', update_infographics).resize(update_infographics);
-
       })
     </script>
   </body>
