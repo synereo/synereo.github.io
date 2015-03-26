@@ -124,31 +124,20 @@ body {
         padding-left: 40px;
     }
 
+    section.technology {
+        background: url(/img/bg/technology.jpg) no-repeat;
+        background-color: rgb(18, 18, 18);
+        background-position: center;
+        background-size: cover;
+        min-height: 550px;
+    }
+
     section.economy {
-        background-color: rgb(34, 34, 34);
-        padding: 30px 20px 40px 10px;
-        div.graphic {
-            text-align: center;
-            @media all and (max-width: 750px) {
-                display: none;
-            }
-        }
-        div.bullet {
-            clear: both;
-            img {
-                float: left;
-                padding-right: 21px;
-                padding-bottom: 29px;
-            }
-            h3 {
-                color: $synereo-blue;
-                font-size: 1.4em;
-            }
-            p {
-                color: #898989;
-                font-size: 1.2em;
-            }
-        }
+        background: url(/img/bg/attention.jpg) no-repeat;
+        background-color: rgb(18, 18, 18);
+        background-position: center;
+        background-size: cover;
+        min-height: 550px;
     }
 
     section.your-team {
