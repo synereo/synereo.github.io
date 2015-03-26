@@ -120,8 +120,36 @@ body {
 
     section.amp {
         min-height: 600px;
-        padding-top: 200px;
-        padding-left: 40px;
+        div.caption {
+            padding-left: 15%;
+            padding-top: 10%;
+            h2 {
+                color: $synereo-orange;
+                font-size: 3.4em;
+                margin-bottom: 1px;
+                font-weight: bold;
+            }
+            h3.regular {
+                margin-top: 1px;
+                margin-bottom: 1px;
+                color: #fff;
+                font-size: 2.4em;
+            }
+            h3.condensed {
+                margin-top: 1px;
+                color: #fff;
+                font-size: 3.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            a {
+                border: 1px $synereo-orange solid;
+                color: $synereo-orange;
+                padding: 9px 17px;
+                text-transform: uppercase;
+                font-size: 1.4em;
+            }
+        }
     }
 
     section.technology {
@@ -149,7 +177,7 @@ body {
             a {
                 border: 1px #fff solid;
                 color: #fff;
-                padding: 7px 17px;
+                padding: 9px 17px;
                 text-transform: uppercase;
                 font-size: 1.4em;
             }
@@ -190,7 +218,7 @@ body {
             a {
                 border: 1px #fff solid;
                 color: #fff;
-                padding: 7px 17px;
+                padding: 9px 17px;
                 text-transform: uppercase;
                 font-size: 1.4em;
             }
