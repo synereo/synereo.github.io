@@ -20,7 +20,7 @@ body {
                 }
                 &.amp {
                     width: 7%;
-                    padding-bottom: 10px;
+                    padding-bottom: 3px;
                 }
                 margin: 0 auto;
             }
@@ -46,14 +46,14 @@ body {
                     }
                     span.title {
                         display: block;
-                        // padding-top: 3%;
+                        padding-top: 6%;
                         font-size: 85%;
                     }
                 }
             }
         }
         div.links {
-            // margin-top: 2%;
+            margin-top: 2%;
             text-align: center;
             @media all and (max-width: 750px) {
                 display: none;
