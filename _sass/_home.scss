@@ -319,4 +319,15 @@ body {
             }
         }
     }
+
+    section.press {
+        background: url(/img/bg/press.jpg) no-repeat;
+        background-color: rgb(18, 18, 18);
+        background-size: cover;
+        padding: 30px 20px 40px 20px;
+        text-align: center;
+        img {
+            margin: 10px;
+        }
+    }
 }
