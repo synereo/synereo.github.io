@@ -328,9 +328,17 @@ body {
         text-align: center;
         img {
             margin: 10px;
+            max-width: 250px;
+            max-height: 150px;
         }
         img:hover {
             opacity: 0.4;
+        }
+        div.row {
+            div.col-md-3 {
+                line-height: 150px;
+                vertical-align: 150px;
+            }
         }
     }
 }
