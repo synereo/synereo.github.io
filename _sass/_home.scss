@@ -7,14 +7,19 @@ body {
             background-color: rgba(0, 0, 0, 0.5);
             padding-top: 150px;
             div.logo {
-
+                img {
+                    height: 140px;
+                }
             }
             div.title {
                 h1 {
                     color: #fff;
                     font-size: 1.7em;
+                    font-weight: 300;
+                    margin-bottom: 3px;
                 }
                 h2 {
+                    margin-top: 0px;
                     color: #fff;
                     text-transform: uppercase;
                 }
