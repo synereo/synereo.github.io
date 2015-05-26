@@ -3,85 +3,40 @@ body {
         background: url(/img/bg/main.jpg) no-repeat;
         background-size: cover;
         background-position: center;
-        padding-top: 50.36%;
-        min-height: 350px;
-        div.images {
-            margin-top: -47%;
-            text-align: center;
-            img {
-                &.logo {
-                    width: 15%;
-                    display: block;
-                }
-                &.crowdsale {
-                    width: 30%;
-                    padding-bottom: 2%;
-                    display: block;
-                }
-                &.amp {
-                    width: 7%;
-                    padding-bottom: 3px;
-                }
-                margin: 0 auto;
+        div.strip {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 150px;
+            div.logo {
+
             }
-            div.countdown {
-                img.amp {
-                    margin-bottom: 2.5%;
-                    width: 6%;
+            div.title {
+                h1 {
+                    color: #fff;
+                    font-size: 1.7em;
                 }
-                span.circle {
-                    border: 1px solid rgba(200, 200, 200, 0.5);
-                    border-radius: 50%;
-                    display: inline-block;
-                    width: 6%;
-                    height: 0;
-                    padding-bottom: 6%;
-                    margin: 0px 6px;
-                    color: #aaa;
-                    span.value {
-                        font-size: 250%;
-                        display: inline-block;
-                        line-height: 55%;
-                        padding-top: 28%;
-                    }
-                    span.title {
-                        display: block;
-                        padding-top: 6%;
-                        font-size: 85%;
-                    }
+                h2 {
+                    color: #fff;
+                    text-transform: uppercase;
                 }
             }
         }
-        div.links {
-            margin-top: 2%;
-            text-align: center;
-            @media all and (max-width: 750px) {
-                display: none;
-            }
-            .cta {
-                padding: 11px 13px 8px 13px;
-                margin: 7px;
-                font-size: 1.3em;
-                border-width: 1px;
-                border-style: solid;
-                text-transform: uppercase;
-            }
-            .cta-blue {
-                color: $synereo-blue;
-                border-color: $synereo-blue;
-            }
-            .cta-orange {
-                color: $synereo-orange;
-                border-color: $synereo-orange;
-            }
-            img.subtitle {
-                width: 35%;
-                margin: 2% auto 0 auto;
-                padding-bottom: 30px;
-                display: block;
-            }
-            img.arrows {
-                padding-bottom: 30px;
+        div.features {
+            div.feature {
+                img {
+                    float: left;
+                    margin: 15px;
+                }
+                h3 {
+                    margin: 18px 0px 2px;
+                    font-size: 1.4em;
+                    &.orange { color: rgb(246, 124, 0); }
+                    &.blue { color: rgb(106, 200, 255); }
+                    &.gray { color: rgb(149, 149, 149); }
+                    &.green { color: rgb(154, 200, 27); }
+                }
+                p {
+                    color: #fff;
+                }
             }
         }
     }
