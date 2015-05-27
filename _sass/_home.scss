@@ -3,9 +3,10 @@ body {
         background: url(/img/bg/main.jpg) no-repeat;
         background-size: cover;
         background-position: center;
+        padding-top: 200px;
         div.strip {
             background-color: rgba(0, 0, 0, 0.5);
-            padding-top: 150px;
+            margin-bottom: 100px;
             div.logo {
                 img {
                     height: 140px;
@@ -26,6 +27,7 @@ body {
             }
         }
         div.features {
+            padding-bottom: 40px;
             div.feature {
                 img {
                     float: left;
