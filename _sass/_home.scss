@@ -43,21 +43,26 @@ body {
         div.features {
             padding-bottom: 40px;
             div.feature {
+                display: flex;
+                align-items: flex-start;
                 img {
-                    float: left;
-                    margin: 15px;
+                    margin: 1em;
                 }
-                h3 {
-                    margin: 18px 0px 2px;
-                    font-size: 1.4em;
-                    &.orange { color: rgb(246, 124, 0); }
-                    &.blue { color: rgb(106, 200, 255); }
-                    &.gray { color: rgb(149, 149, 149); }
-                    &.green { color: rgb(154, 200, 27); }
+                div.text {
+                    flex: 1;
+                    h3 {
+                        margin: 18px 0px 2px;
+                        font-size: 1.4em;
+                        &.orange { color: rgb(246, 124, 0); }
+                        &.blue { color: rgb(106, 200, 255); }
+                        &.gray { color: rgb(149, 149, 149); }
+                        &.green { color: rgb(154, 200, 27); }
+                    }
+                    p {
+                        color: #fff;
+                    }
                 }
-                p {
-                    color: #fff;
-                }
+
             }
             div.down {
                 padding-top: 40px;
