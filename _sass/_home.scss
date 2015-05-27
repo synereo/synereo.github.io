@@ -3,7 +3,7 @@ body {
         background: url(/img/bg/main.jpg) no-repeat;
         background-size: cover;
         background-position: center;
-        padding-top: 200px;
+        padding-top: 130px;
         div.strip {
             background-color: rgba(0, 0, 0, 0.4);
             padding-top: 7px;
@@ -33,7 +33,7 @@ body {
             div.video {
                 iframe {
                     position: absolute;
-                    margin-top: -100px;
+                    margin-top: -55px;
                     border: 3px $synereo-blue solid;
                     border-radius: 3px;
                     box-shadow: -3px 3px 20px #000;
@@ -62,7 +62,21 @@ body {
                         color: #fff;
                     }
                 }
-
+            }
+            div.cta {
+                margin-top: 100px;
+                span {
+                    padding: 16px 3px 12px 3px;
+                    border: 2px $synereo-blue solid;
+                    a {
+                        background-color: $synereo-blue;
+                        color: #fff;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1.4em;
+                        padding: 8px 18px;
+                    }
+                }
             }
             div.down {
                 padding-top: 40px;
