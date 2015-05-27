@@ -25,6 +25,14 @@ body {
                     text-transform: uppercase;
                 }
             }
+            div.video {
+                iframe {
+                    position: absolute;
+                    margin-top: -100px;
+                    border: 3px $synereo-blue solid;
+                    box-shadow: -5px 5px 15px #000;
+                }
+            }
         }
         div.features {
             padding-bottom: 40px;
@@ -44,6 +52,10 @@ body {
                 p {
                     color: #fff;
                 }
+            }
+            div.down {
+                padding-top: 40px;
+                text-align: center;
             }
         }
     }
