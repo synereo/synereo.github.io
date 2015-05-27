@@ -6,13 +6,18 @@ body {
         padding-top: 200px;
         div.strip {
             background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 7px;
+            padding-bottom: 13px;
             margin-bottom: 100px;
             div.logo {
+                text-align: right;
+                padding-right: 3px;
                 img {
-                    height: 140px;
+                    height: 160px;
                 }
             }
             div.title {
+                padding-left: 3px;
                 h1 {
                     color: #fff;
                     font-size: 1.7em;
