@@ -39,6 +39,11 @@ body {
                     box-shadow: -3px 3px 20px #000;
                 }
             }
+            @media all and (max-width: 800px) {
+                div.video, div.logo {
+                    display: none;
+                }
+            }
         }
         div.features {
             padding-bottom: 40px;
