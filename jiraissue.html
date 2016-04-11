@@ -4,16 +4,27 @@
   <script type="text/javascript" src="https://synereo.atlassian.net/s/367c683a4606043ee72a90fc87527411-T/lkx5ka/72002/b6b48b2829824b869586ac216d119363/2.0.13/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=aa1e5acc"></script>
   <script type="text/javascript">window.ATL_JQ_PAGE_PROPS =  {
     "triggerFunction": function(showCollectorDialog) {
-    //Requires that jQuery is available!
     jQuery("#feedback-button").click(function(e) {
       e.preventDefault();
       showCollectorDialog();
     });
-	}};</script>
-
+  }};</script>
 </head>
 <body>
-  <h2>Synereo Feedback</h2>
-	<a href="#" id="feedback-button" class='btn btn-primary btn-large'>Report design feedback here...</a>
+
+<div id="wrapper" style="text-align: center; margin-top: 100px;">
+  <div id="feedback" style="display: inline-block;">
+    <h1>Synereo Product Feedback Gateway</h1>
+    This form is intended to be an issue collector for bugs, feature suggestions, and any other design related feedback
+    that you'd like to get into the hands of the core design team. Please visit the
+    <a href="https://synereo.atlassian.net/wiki/display/PD/" title="Synereo Product Design">Product Design space</a>
+    for more information.
+    <br />
+    <a href="#" id="feedback-button" class='btn btn-primary btn-large'>Submit feedback</a>
+  </div>
+</div>
+
+
+  
 </body>
 </html?
