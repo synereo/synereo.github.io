@@ -9,3 +9,6 @@ github_username:  synereo
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-sitemap
