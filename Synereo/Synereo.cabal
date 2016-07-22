@@ -1,0 +1,20 @@
+name:                Synereo
+version:             0.1.0.0
+synopsis:            Hakyll project template from stack
+description:         Please see README.md
+homepage:            https://github.com/weeeeeew/Synereo#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Jack Pettersson
+maintainer:          jackpettersson@gmail.com
+copyright:           2016 Jack Pettersson
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable Synereo
+  main-is:             site.hs
+  default-language:    Haskell2010
+  ghc-options:         -threaded
+  build-depends:       base == 4.*,
+                       hakyll == 4.7.*
